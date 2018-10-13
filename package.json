@@ -2,7 +2,7 @@
     "name": "nativescript-extend",
     "displayName": "Nativescript Extend",
     "description": "Nativescript extended tool, which help create cross-platform mobile",
-    "version": "1.10.15",
+    "version": "1.10.16",
     "icon": "image/icon.png",
     "publisher": "Paul-Ehigie-Paul",
     "repository": {
@@ -32,7 +32,7 @@
     ],
     "activationEvents": [
         "workspaceContains:**/**/app-root.xml",
-        "*"
+        "workspaceContains:**/nativescript*"
     ],
     "main": "./out/extension",
     "contributes": {

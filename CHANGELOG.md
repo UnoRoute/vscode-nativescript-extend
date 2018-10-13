@@ -1,7 +1,21 @@
 # Change Log
-All notable changes to the "nativescript-extend" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+<!-- ## [Unreleased]
+- Initial release -->
 
 ## [Unreleased]
-- Initial release
+
+- Nativescript language server
+
+## [1.10.16]
+
+### Changed
+
+- Made changes to the documentaion
+
+## [1.10.15]
+
+### Added
+
+- Fixed bugs
+- Added inspired projects

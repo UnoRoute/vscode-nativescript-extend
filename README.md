@@ -6,12 +6,18 @@ This extension comes with snippets, emulator executor and a add file context men
 
 All UI components are prefixed with `NS`. Attributes do not have a prefix.
 
-## Feature
+> ## Extension inspired by
+>
+> - Diemas Michiels - Android iOS emulator
+> - Alex Rainman - Add NativeScript Files
+> - Tsvetan Ganev - NativeScript XML Snippets
+
+## Features
 
 - Emulator,
 - Snippets,
 - Add components / page,
-- Naivescript langauge server(coming soon) similar to nativescipt playground.
+- _Naivescript langauge server(coming soon) similar to nativescipt playground._
 
 ## UI Components
 
@@ -111,5 +117,29 @@ All UI components are prefixed with `NS`. Attributes do not have a prefix.
 ## How to use
 
 Just setup your the android emulator path on your setting panel
+
 nativescript-extend.emulatorPath
+
 to enable the emulator
+
+### MIT License
+
+Copyright (c) 2018 Paul Ehigie
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
