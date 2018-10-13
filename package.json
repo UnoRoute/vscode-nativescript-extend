@@ -1,0 +1,132 @@
+{
+    "name": "nativescript-extend",
+    "displayName": "Nativescript Extend",
+    "description": "Nativescript extended tool, which help create cross-platform mobile",
+    "version": "1.10.15",
+    "icon": "image/icon.png",
+    "publisher": "Paul-Ehigie-Paul",
+    "repository": {
+        "type": "git",
+        "url": "https://gitlab.com/ehigiepaul/vscode-nativescript-extend.git"
+
+    },
+    "engines": {
+        "vscode": "^1.28.0"
+    },
+    "galleryBanner": {
+        "color": "#005cc8",
+        "theme": "dark"
+    },
+    "categories": [
+
+        "Snippets",
+        "Programming Languages",
+        "Other"
+    ],
+    "keywords": [
+        "Nativescript",
+        "typescript",
+        "IOS",
+        "Android",
+        "Add Files menu context"
+    ],
+    "activationEvents": [
+        "workspaceContains:**/**/app-root.xml",
+        "*"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [{
+                "command": "nativescript.launchEmulator",
+                "title": "Launch Emulator",
+                "category": "nativescript"
+            },
+            {
+                "command": "nativescript.addPage",
+                "title": "Add NativeScript Page"
+
+            },
+            {
+                "command": "nativescript.addComponent",
+                "title": "Add NativeScript Component"
+            },
+            {
+                "command": "nativescript.addVuePage",
+                "title": "Add NativeScript Vue Pages"
+            }
+
+        ],
+        "menus": {
+            "explorer/context": [{
+                    "when": "",
+                    "command": "nativescript.addPage",
+                    "group": "Add Files"
+                },
+                {
+                    "when": "",
+                    "command": "nativescript.addComponent",
+                    "group": "Add Files"
+                },
+                {
+                    "when": "",
+                    "command": "nativescript.addVuePage",
+                    "group": "Add Files"
+                }
+            ]
+        },
+
+        "snippets": [{
+                "language": "vue",
+                "path": "./snippets/xml.json"
+            },
+
+            {
+                "language": "xml",
+                "path": "./snippets/xml.json"
+            },
+            {
+                "language": "vue-html",
+                "path": "./snippets/xml.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/xml.json"
+            }
+        ],
+        "typescriptServerPlugins": [{
+            "name": "typescript-styled-plugin"
+        }],
+        "configuration": {
+            "title": "Nativescript Extend Configuration",
+            "properties": {
+                "nativescript-extend.emulatorPath": {
+                    "type": "string",
+                    "default": "D:\\USER\\android-sdk\\emulator\\emulator.exe",
+                    "description": "The absolute path of the Android emulator script.",
+                    "scope": "application"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "dependencies": {
+        "typescript-styled-plugin": "*",
+        "q": "^1.4.1",
+        "path": "^0.12.7"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "tslint": "^5.8.0",
+        "rimraf": "2.6.1",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42",
+        "@types/q": "^1.0.0",
+        "@types/rimraf": "0.0.28"
+    }
+}
