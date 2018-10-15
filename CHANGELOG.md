@@ -5,7 +5,19 @@
 
 ## [Unreleased]
 
-- Nativescript language server
+- Nativescript language server(coming soon)
+- Nativescript editor(coming soon)
+- Navivescript Preview(coming soon)
+
+## [1.10.17]
+
+### Changed
+
+- Android emulator static which doesnt allow more than one emulator.
+- Change Android status bar text and color
+
+### Fix
+- Fixed vue page content format.
 
 ## [1.10.16]
 
