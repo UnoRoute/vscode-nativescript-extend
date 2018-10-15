@@ -8,6 +8,13 @@ import { iOSPick } from "./emulator/ios";
 import { AddPage } from "./context/add-page";
 import { AddComponent } from "./context/add-component";
 import { AddVuePage } from "./context/add-vueFile";
+import nsPreview from "./emulator/nsPreview";
+
+export var bar = vscode.window.createStatusBarItem(
+  vscode.StatusBarAlignment.Right,
+  0
+);
+// nsPreview;
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
@@ -30,6 +37,7 @@ function launchEmulator(context) {
   let disposable = vscode.commands.registerCommand(
     "nativescript.launchEmulator",
     () => {
+      // const pickerList = ["Nativescript Preview", OS_PICKER.ANDROID];
       const pickerList = [OS_PICKER.ANDROID];
       process.platform === "darwin" && pickerList.push(OS_PICKER.IOS);
 
@@ -41,6 +49,9 @@ function launchEmulator(context) {
           case OS_PICKER.IOS:
             iOSPick();
             break;
+          // case "Nativescript Preview":
+          //   runPreview();
+          //   break;
         }
       });
     }
@@ -50,13 +61,9 @@ function launchEmulator(context) {
 }
 
 function deviceStatusBar() {
-  var bar = vscode.window.createStatusBarItem(
-    vscode.StatusBarAlignment.Right,
-    3
-  );
   bar.tooltip = "Nativescript";
-  bar.text = "devices";
-  bar.color = "red";
+  bar.text = "Run Emulator";
+  // bar.color = "red";
   bar.command = "nativescript.launchEmulator";
   bar.show();
 }
