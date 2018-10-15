@@ -20,30 +20,19 @@ export class FileContents {
     var inputUpperCase = this.inputToUpperCase(inputName);
     var pageContent =
       "<template>\n" +
-      '<Page class="page">\n' +
-      '<ActionBar title="My Tasks" class="action-bar" />\n' +
-      '<TabView height="100%">\n' +
-      '<TabViewItem title="To Do">\n' +
-      '<Label text="This tab will list active tasks and will let users add new tasks." textWrap="true" />\n' +
-      "</TabViewItem>\n" +
-      "      \n" +
-      '<TabViewItem title="Completed">\n' +
-      '<Label text="This tab will list completed tasks for tracking." textWrap="true" />\n' +
-      "</TabViewItem>\n" +
-      "    \n" +
-      "</TabView>\n" +
-      "</Page>\n" +
+      '\t<Page class="page">\n' +
+      "\t</Page>\n" +
       "</template>\n" +
+      "\n"+
       "<script>\n" +
-      "export default {\n" +
-      "data(){\n" +
-      "return{\n" +
+      "\texport default {\n" +
+      "\t\tdata(){\n" +
+      "\t\t\treturn{\n" +
+      "\t\t\t};\n" +
+      "\t\t}\n" +
+      "\t};\n" +
       "\n" +
-      "};\n" +
-      "}\n" +
-      "};\n" +
       "</script>\n" +
-      "\n" +
       "<style>\n" +
       "\n" +
       "</style>\n";
@@ -62,6 +51,7 @@ export class FileContents {
       `}`;
     return pageCodeContent;
   }
+
   viewModelContent(inputName) {
     var inputUpperCase = this.inputToUpperCase(inputName);
     var viewModelContent =
@@ -77,6 +67,7 @@ export class FileContents {
       `}`;
     return viewModelContent;
   }
+
   componentContent(inputName) {
     var inputUpperCase = this.inputToUpperCase(inputName);
     var componentContent =
@@ -86,6 +77,7 @@ export class FileContents {
       `<Label class="${inputName}-component" loaded="onLoaded" text="${inputUpperCase} Component!"/>`;
     return componentContent;
   }
+
   componentCodeContent(inputName) {
     var inputUpperCase = this.inputToUpperCase(inputName);
     var componentCodeContent =
@@ -98,10 +90,12 @@ export class FileContents {
       `}`;
     return componentCodeContent;
   }
+
   cssContent(inputName, fileName) {
     var cssContent = `.${inputName}-${fileName} {\n\n}`;
     return cssContent;
   }
+
   inputToUpperCase(inputName) {
     var inputUpperCase;
     inputUpperCase = inputName.charAt(0).toUpperCase() + inputName.slice(1);
