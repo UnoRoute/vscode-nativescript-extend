@@ -29,39 +29,47 @@
         "Add Files menu context"
     ],
     "activationEvents": [
+        "*",
         "workspaceContains:**/nativescript*"
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [
-            {
+        "commands": [{
                 "command": "nativescript.launchEmulator",
                 "title": "Launch Emulator",
                 "category": "nativescript"
             },
             {
-                "command": "nativescript.addPage",
-                "title": "Add NativeScript Page"
+                "command": "nativescript.addJSPage",
+                "title": "Add NativeScript JS Page"
             },
             {
-                "command": "nativescript.addComponent",
-                "title": "Add NativeScript Component"
+                "command": "nativescript.addTsPage",
+                "title": "Add NativeScript TS Page"
+            },
+            {
+                "command": "nativescript.addNGPage",
+                "title": "Add NativeScript NG Page"
             },
             {
                 "command": "nativescript.addVuePage",
-                "title": "Add NativeScript Vue Pages"
+                "title": "Add NativeScript VUE Pages"
             }
         ],
         "menus": {
-            "explorer/context": [
-                {
+            "explorer/context": [{
                     "when": "",
-                    "command": "nativescript.addPage",
+                    "command": "nativescript.addJSPage",
                     "group": "Add Files"
                 },
                 {
                     "when": "",
-                    "command": "nativescript.addComponent",
+                    "command": "nativescript.addTsPage",
+                    "group": "Add Files"
+                },
+                {
+                    "when": "",
+                    "command": "nativescript.addNGPage",
                     "group": "Add Files"
                 },
                 {
@@ -71,8 +79,7 @@
                 }
             ]
         },
-        "snippets": [
-            {
+        "snippets": [{
                 "language": "vue",
                 "path": "./snippets/xml.json"
             },
@@ -89,11 +96,9 @@
                 "path": "./snippets/xml.json"
             }
         ],
-        "typescriptServerPlugins": [
-            {
-                "name": "typescript-styled-plugin"
-            }
-        ],
+        "typescriptServerPlugins": [{
+            "name": "typescript-styled-plugin"
+        }],
         "configuration": {
             "title": "Nativescript Extend Configuration",
             "properties": {

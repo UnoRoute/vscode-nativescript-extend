@@ -7,7 +7,7 @@ export class contents
     IVueContents,
     IAngularContents,
     IJavascriptContent {
-  modelTs(name: string): string {
+  viewModelTs(name: string): string {
     return `
 import { Observable } from 'tns-core-modules/data/observable';
 
@@ -260,5 +260,10 @@ module.exports = ${inputToUpperCase(name)}ViewModel;
 function inputToUpperCase(inputName) {
   var inputUpperCase;
   inputUpperCase = inputName.charAt(0).toUpperCase() + inputName.slice(1);
-  return this.camelCase(inputUpperCase);
+  return camelCase(inputUpperCase);
+}
+function camelCase(input) {
+  return input.replace(/-([a-z])/gi, function(all, letter) {
+    return letter.toUpperCase();
+  });
 }
