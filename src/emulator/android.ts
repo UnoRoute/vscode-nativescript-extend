@@ -5,6 +5,7 @@ import { showSuccessMessage, showErrorMessage } from "./utils/message";
 import { ANDROID_COMMANDS } from "./constants";
 import * as vscode from "vscode";
 import { bar } from "../extension";
+import { exec } from "child_process";
 
 // Get Android devices and pick one
 export async function androidPick() {
@@ -42,6 +43,7 @@ const runAndroidEmulator = async emulator => {
   let stdout = await runCmd(
     `${emulatorPath()}${ANDROID_COMMANDS.RUN_AVD}${emulator}`
   );
+
   bar.text = "Run Emulator";
   // bar.color = "red";
   bar.command = "nativescript.launchEmulator";

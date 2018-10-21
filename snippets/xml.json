@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema",
+    "$schema": "http://schemas.nativescript.org/tns.xsd",
     /* #region */
     // Action Bar
     "{NS} Action Bar": {
@@ -429,6 +429,10 @@
     },
 
     // Attributes
+    "{NS} Color Attribute": {
+        "prefix": "color",
+        "body": "color=\"$1\"$2"
+    },
     "{NS} CSS Class Attribute": {
         "prefix": "class",
         "body": "class=\"$1\"$2"
@@ -453,10 +457,48 @@
         "prefix": "text",
         "body": "text=\"$1\"$2"
     },
-    "{NS} backgroundColor Attribute": {
-        "prefix": "backgroundColor",
+    "{NS} Margin Attribute": {
+        "prefix": "margin",
+        "body": "margin=\"$1\"$2"
+    },
+    "{NS} Opacity Attribute": {
+        "prefix": "opacity",
+        "body": "opacity=\"$1\"$2"
+    },
+    "{NS} Background Color Attribute": {
+        "prefix": "bgColor",
         "body": "backgroundColor=\"$1\"$2"
     },
+    "{NS} Background Image Attribute": {
+        "prefix": "bgImage",
+        "body": "backgroundImage=\"$1\"$2"
+    },
+    "{NS} Border Color Attribute": {
+        "prefix": "borderColor",
+        "body": "borderColor=\"$1\"$2"
+    },
+    "{NS} Border Width Attribute": {
+        "prefix": "borderWidth",
+        "body": "borderWidth=\"$1\"$2"
+    },
+
+    "{NS} IOS Safe Area Attribute": {
+        "prefix": "iosOverflowSafeArea",
+        "body": "iosOverflowSafeArea=true"
+    },
+    "{NS} Translate X Attribute": {
+        "prefix": "translateX",
+        "body": "translateX=\"$1\""
+    },
+    "{NS} Translate Y Attribute": {
+        "prefix": "translateY",
+        "body": "translateY=\"$1\""
+    },
+    "{NS} Style Attribute": {
+        "prefix": "style",
+        "body": "style=\"$1\""
+    },
+
     "{NS} xmlns Attribute": {
         "prefix": "xmlns",
         "body": "xmlns:$1=\"$2\""

@@ -20,7 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
   console.log(
     'Congratulations, your extension "nativescript-extend" is now active!'
   );
-
+  launchEmulator(context);
   new contextMenu(context);
 }
 
@@ -28,6 +28,11 @@ export function activate(context: vscode.ExtensionContext) {
 export function deactivate() {}
 
 function launchEmulator(context) {
+  bar.tooltip = "Nativescript";
+  bar.text = "Run Emulator";
+  // bar.color = "red";
+  bar.command = "nativescript.launchEmulator";
+  bar.show();
   let disposable = vscode.commands.registerCommand(
     "nativescript.launchEmulator",
     () => {

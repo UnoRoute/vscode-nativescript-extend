@@ -2,7 +2,7 @@
     "name": "nativescript-extend",
     "displayName": "Nativescript Extend",
     "description": "Nativescript extended tool, which help create cross-platform mobile",
-    "version": "1.10.17",
+    "version": "1.10.21",
     "icon": "image/icon.png",
     "publisher": "Paul-Ehigie-Paul",
     "repository": {
@@ -29,8 +29,9 @@
         "Add Files menu context"
     ],
     "activationEvents": [
-        "*",
-        "workspaceContains:**/nativescript*"
+        "workspaceContains:**/nativescript*",
+        "workspaceContains:**/nativescript-*",
+        "workspaceContains:**/tns*"
     ],
     "main": "./out/extension",
     "contributes": {
@@ -99,6 +100,20 @@
         "typescriptServerPlugins": [{
             "name": "typescript-styled-plugin"
         }],
+        "configurationDefaults": {
+            "[vue]": {
+                "editor.snippetSuggestions": "top"
+            },
+            "[typescript]": {
+                "editor.snippetSuggestions": "top"
+            },
+            "[javascript]": {
+                "editor.snippetSuggestions": "top"
+            },
+            "[xml]": {
+                "editor.snippetSuggestions": "top"
+            }
+        },
         "configuration": {
             "title": "Nativescript Extend Configuration",
             "properties": {
@@ -106,6 +121,12 @@
                     "type": "string",
                     "default": "D:\\USER\\android-sdk\\emulator\\emulator.exe",
                     "description": "The absolute path of the Android emulator script.",
+                    "scope": "application"
+                },
+                "nativescript-extend.emulatorPath.ios": {
+                    "type": "string",
+                    "default": "",
+                    "description": "The absolute path of the IOS emulator script.",
                     "scope": "application"
                 }
             }

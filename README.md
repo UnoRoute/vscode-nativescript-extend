@@ -6,17 +6,11 @@ This extension comes with snippets, emulator executor and a add file context men
 
 All UI components are prefixed with `NS`. Attributes do not have a prefix.
 
-> ## Extension inspired by
->
-> - Diemas Michiels - Android iOS emulator
-> - Alex Rainman - Add NativeScript Files
-> - Tsvetan Ganev - NativeScript XML Snippets
-
 ## Features
 
 - Emulator,
 - Snippets,
-- Add components / page,
+- Explorer Context Menu Page Creation,
 - _Naivescript langauge server(coming soon) similar to nativescipt playground._
 
 ## UI Components
@@ -36,7 +30,6 @@ All UI components are prefixed with `NS`. Attributes do not have a prefix.
 - Action Bar - `NSactionbar`
 - Label - `NSlabel`
 - Text Field - `NStextfield`
-- Secure Text Field (for passwords) - `NSpassword`
 - Text View - `NStextview`
 - Image - `NSimg`
 - Border - `NSborder`
@@ -50,13 +43,26 @@ All UI components are prefixed with `NS`. Attributes do not have a prefix.
 - Time Picker - `NStime`
 - List Picker - `NSlistpicker`
 - Segmented Bar - `NSsegmentedbar`
-- Scroll View - 'NSscrollview'
+- Scroll View - `NSscrollview`
 - Tab View - `NStabview`
 - List View - `NSlistview`
 - Web View - `NSwebview`
 - Repeater - `NSrepeater`
 - Password Field - `NSpassword`
 - Action Item - `NSactionItem`
+
+### Newly added Attributes
+
+- backgroundColor - `bgColor`
+- backgroundImage - `bgImage`
+- borderColor - `borderColor`
+- borderWidth - `borderWidth`
+- translateX - `translateX`
+- translateY - `translateY`
+- margin - `margin`
+- opacity - `opacity`
+- style - `style`
+- iosOverflowSafeArea - `iosOverflowSafeArea`
 
 ### Attributes
 
@@ -65,14 +71,11 @@ All UI components are prefixed with `NS`. Attributes do not have a prefix.
 - right - `right`
 - top - `top`
 - bottom - `bottom`
-- backgroundColor - `backgroundColor`
 - action Bar Hidden - `actionBarHidden`
 - Icon - `icon`
 - xmlns - `xmlns`
 - text - `text`
 - icon - `icon`
-- tap - `tap`
-- @tap - `@tap`
 - textWrap - `wrap`
 - horizontalAlignment - `halign`
 - verticalAlignment - `valign`
