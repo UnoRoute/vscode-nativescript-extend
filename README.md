@@ -6,6 +6,18 @@ This extension comes with snippets, emulator executor and a add file context men
 
 All UI components are prefixed with `NS`. Attributes do not have a prefix.
 
+#Changes
+
+## [1.10.21] - 2018-10-21
+
+- Improved Smart Page creation for Nativescript projects only
+- Fixed emulator to detect nativescript projects
+- Added more attribute snippets
+- Added more parameter to snippets
+- Added plugin inteligent.
+- Updated the `README.MD`
+- Update the explorer context menu. It now creates a Page folder for every page created except for VUE which is a SFC
+
 ## Features
 
 - Emulator,
