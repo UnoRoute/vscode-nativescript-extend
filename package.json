@@ -6,8 +6,7 @@
     "icon": "image/icon.png",
     "publisher": "Paul-Ehigie-Paul",
     "repository": {
-        "type": "git",
-        "url": "https://gitlab.com/ehigiepaul/vscode-nativescript-extend"
+        "url": "https://gitlab.com/ehigiepaul/vscode-nativescript-extend/raw/master"
     },
     "engines": {
         "vscode": "^1.28.0"
