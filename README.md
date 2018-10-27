@@ -22,13 +22,13 @@ All UI layout and widget are prefixed with `NS`. Attributes do not have a prefix
 # Features
 
 - ### Emulator,
-![emulator](/image/emulator.gif)
+![emulator](./image/emulator.gif)
 - ### Emulator auto setup
-![emulator auto setup](/image/auto%20setup.gif)
+![emulator auto setup](./image/auto%20setup.gif)
 - ### Snippets,
-![snippets](/image/snippets.gif)
+![snippets](./image/snippets.gif)
 - ### Explorer Context Menu Page Creation,
-![Context Menu](/image/cm.gif)
+![Context Menu](./image/cm.gif)
 - ### Nativscript XML widgets, attribute and parameters validation.
 
 # Snippets Components keys
