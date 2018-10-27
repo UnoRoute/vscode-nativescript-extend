@@ -25,36 +25,36 @@ export class contextMenu extends createPage implements IContext {
 
   appJsPage(): void {
     this.ctx.subscriptions.push(
-      vscode.commands.registerCommand("nativescript.addJSPage", arg => {
+      vscode.commands.registerCommand("nativescriptExtend.addJSPage", arg => {
         vscode.window.showInputBox().then(e => {
-          this.javascript(arg.fsPath, e);
+          this.javascript(arg.fsPath, e.toLowerCase());
         });
       })
     );
   }
   addTsPage(): void {
     this.ctx.subscriptions.push(
-      vscode.commands.registerCommand("nativescript.addTsPage", arg => {
+      vscode.commands.registerCommand("nativescriptExtend.addTsPage", arg => {
         vscode.window.showInputBox().then(e => {
-          this.typescript(arg.fsPath, e);
+          this.typescript(arg.fsPath, e.toLowerCase());
         });
       })
     );
   }
   addVuePage(): void {
     this.ctx.subscriptions.push(
-      vscode.commands.registerCommand("nativescript.addVuePage", arg => {
+      vscode.commands.registerCommand("nativescriptExtend.addVuePage", arg => {
         vscode.window.showInputBox().then(e => {
-          this.vue(arg.fsPath, e);
+          this.vue(arg.fsPath, e.toLowerCase());
         });
       })
     );
   }
   addNgPage(): void {
     this.ctx.subscriptions.push(
-      vscode.commands.registerCommand("nativescript.addNGPage", arg => {
+      vscode.commands.registerCommand("nativescriptExtend.addNGPage", arg => {
         vscode.window.showInputBox().then(e => {
-          this.angular(arg.fsPath, e);
+          this.angular(arg.fsPath, e.toLowerCase());
         });
       })
     );

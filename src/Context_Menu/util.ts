@@ -31,12 +31,13 @@ export class util {
       if (!exist) {
         fs.mkdir(path.join(dir, d), () => {
           fs.writeFile(path.join(dir, d, file), data, err => {
-            this.message(`${file} created`);
           });
         });
       } else {
         vscode.window.showErrorMessage(`${file} exists`);
+        
       }
+      this.message(`${file} created`);
     });
   }
 
