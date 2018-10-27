@@ -1,8 +1,8 @@
 {
     "name": "nativescript-extend",
     "displayName": "Nativescript Extend",
-    "description": "Nativescript extended tool, which help create cross-platform mobile",
-    "version": "1.10.22",
+    "description": "Nativescript extend tool pack, helps Nativescript developers create cross-platform mobiles easliy with the support of snippets, a xml validator and a run emulator from VSCode",
+    "version": "1.10.28",
     "icon": "image/icon.png",
     "publisher": "Paul-Ehigie-Paul",
     "repository": {
@@ -19,6 +19,7 @@
     "categories": [
         "Snippets",
         "Programming Languages",
+        "Extension Packs",
         "Other"
     ],
     "keywords": [
@@ -26,61 +27,83 @@
         "typescript",
         "IOS",
         "Android",
-        "Add Files menu context"
+        "Add Files menu context",
+        "XML Validation"
     ],
     "activationEvents": [
         "workspaceContains:**/nativescript*",
         "workspaceContains:**/nativescript-*",
         "workspaceContains:**/tns*"
     ],
+    "extensionPack": [
+        "redhat.vscode-xml",
+        "octref.vetur"
+    ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [{
-                "command": "nativescript.launchEmulator",
+        "commands": [
+            {
+                "command": "nativescriptExtend.launchEmulator",
                 "title": "Launch Emulator",
-                "category": "nativescript"
+                "category": "Nativescript-Extend"
             },
             {
-                "command": "nativescript.addJSPage",
-                "title": "Add NativeScript JS Page"
+                "command": "nativescriptExtend.setupEmulator",
+                "title": "Setup Emulator",
+                "category": "Nativescript-Extend"
             },
             {
-                "command": "nativescript.addTsPage",
-                "title": "Add NativeScript TS Page"
+                "command": "nativescriptExtend.addXmlValidator",
+                "title": "Add Nativescript XML Validator",
+                "category": "Nativescript-Extend"
             },
             {
-                "command": "nativescript.addNGPage",
-                "title": "Add NativeScript NG Page"
+                "command": "nativescriptExtend.addJSPage",
+                "title": "Add NativeScript JS Page",
+                "category": "Nativescript-Extend"
             },
             {
-                "command": "nativescript.addVuePage",
-                "title": "Add NativeScript VUE Pages"
+                "command": "nativescriptExtend.addTsPage",
+                "title": "Add NativeScript TS Page",
+                "category": "Nativescript-Extend"
+            },
+            {
+                "command": "nativescriptExtend.addNGPage",
+                "title": "Add NativeScript NG Page",
+                "category": "Nativescript-Extend"
+            },
+            {
+                "command": "nativescriptExtend.addVuePage",
+                "title": "Add NativeScript VUE Pages",
+                "category": "Nativescript-Extend"
             }
         ],
         "menus": {
-            "explorer/context": [{
+            "explorer/context": [
+                {
                     "when": "",
-                    "command": "nativescript.addJSPage",
+                    "command": "nativescriptExtend.addJSPage",
                     "group": "Add Files"
                 },
                 {
                     "when": "",
-                    "command": "nativescript.addTsPage",
+                    "command": "nativescriptExtend.addTsPage",
                     "group": "Add Files"
                 },
                 {
                     "when": "",
-                    "command": "nativescript.addNGPage",
+                    "command": "nativescriptExtend.addNGPage",
                     "group": "Add Files"
                 },
                 {
                     "when": "",
-                    "command": "nativescript.addVuePage",
+                    "command": "nativescriptExtend.addVuePage",
                     "group": "Add Files"
                 }
             ]
         },
-        "snippets": [{
+        "snippets": [
+            {
                 "language": "vue",
                 "path": "./snippets/xml.json"
             },
@@ -97,36 +120,18 @@
                 "path": "./snippets/xml.json"
             }
         ],
-        "typescriptServerPlugins": [{
-            "name": "typescript-styled-plugin"
-        }],
-        "configurationDefaults": {
-            "[vue]": {
-                "editor.snippetSuggestions": "top"
-            },
-            "[typescript]": {
-                "editor.snippetSuggestions": "top"
-            },
-            "[javascript]": {
-                "editor.snippetSuggestions": "top"
-            },
-            "[xml]": {
-                "editor.snippetSuggestions": "top"
+        "typescriptServerPlugins": [
+            {
+                "name": "typescript-styled-plugin"
             }
-        },
+        ],
         "configuration": {
             "title": "Nativescript Extend Configuration",
             "properties": {
                 "nativescript-extend.emulatorPath": {
                     "type": "string",
-                    "default": "D:\\USER\\android-sdk\\emulator\\emulator.exe",
-                    "description": "The absolute path of the Android emulator script.",
-                    "scope": "application"
-                },
-                "nativescript-extend.emulatorPath.ios": {
-                    "type": "string",
                     "default": "",
-                    "description": "The absolute path of the IOS emulator script.",
+                    "description": "The absolute path of the Android emulator script.",
                     "scope": "application"
                 }
             }
@@ -141,10 +146,12 @@
     "dependencies": {
         "@types/axios": "^0.14.0",
         "@types/qr-image": "^3.2.1",
+        "@types/shelljs": "^0.8.0",
         "axios": "^0.18.0",
         "path": "^0.12.7",
         "q": "^1.4.1",
         "qr-image": "^3.2.0",
+        "shelljs": "^0.8.2",
         "typescript-styled-plugin": "*",
         "vscode": "^1.1.21"
     },

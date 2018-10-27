@@ -22,7 +22,7 @@
         "prefix": "NSstack",
         "body": [
             "<StackLayout>",
-            "    ",
+            "    $1",
             "</StackLayout>"
         ],
         "description": "The StackLayout stacks its child elements below or beside each other, depending on its orientation. It is very useful to create lists."
@@ -31,7 +31,7 @@
         "prefix": "NSflex",
         "body": [
             "<FlexboxLayout>",
-            "    ",
+            "    $1",
             "</FlexboxLayout>"
         ],
         "description": "The FlexboxLayout is a non-conforming implementation of the CSS Flexible Box Layout based on an existing Apache-2 licensed flexbox implementation hosted on github.com/google/flexbox-layout."
@@ -40,7 +40,7 @@
         "prefix": "NSstack_horizontal",
         "body": [
             "<StackLayout orientation=\"horizontal\">",
-            "    ",
+            "    $1",
             "</StackLayout>"
         ],
         "description": "The StackLayout stacks its child elements below or beside each other, depending on its orientation. It is very useful to create lists."
@@ -49,7 +49,7 @@
     "{NS} Wrap Layout": {
         "prefix": "NSwrap",
         "body": [
-            "<WrapLayout orientation=\"horizontal\" itemWidth=\"\" itemHeight=\"\">",
+            "<WrapLayout orientation=\"horizontal\" itemWidth=\"$1\" itemHeight=\"$2\">",
             "    $3",
             "</WrapLayout>"
         ]
@@ -59,7 +59,7 @@
         "body": [
             "<AbsoluteLayout>",
             "    <Label text=\"This is Label 1\" top=\"\"  left=\"\"  />",
-            "    ",
+            "    $1",
             "</AbsoluteLayout>"
         ],
         "description": "The AbsoluteLayout is the simplest layout in NativeScript. It uses absolute left-top coordinates to position its children. The AbsoluteLayout will not enforce any layout coNStraints on its children and will not resize them at runtime when its size changes"
@@ -76,7 +76,7 @@
     "{NS} Grid Layout": {
         "prefix": "NSgrid",
         "body": [
-            "<GridLayout rows=\"\" colums=\"\">",
+            "<GridLayout rows=\"$1\" colums=\"$2\">",
             "    $3",
             "</GridLayout>"
         ]
@@ -225,7 +225,7 @@
         "prefix": "NSscrollview",
         "body": [
             "<ScrollView>",
-            "    ",
+            "    $1",
             "</ScrollView>"
         ]
     },
@@ -234,7 +234,7 @@
         "body": [
             "<ListView items=\"{{ source }}\"  loaded=\"onLoaded\" itemLoading=\"onItemLoading\" itemTap=\"onItemTap\">",
             "    <ListView.itemTemplate>",
-            "        ",
+            "        $1",
             "    </ListView.itemTemplate>",
             "</ListView>"
         ]
@@ -256,25 +256,25 @@
             "        </TabViewItem>",
             "    </TabView.items>",
             "</TabView>",
-            ""
+            "$1"
         ]
     },
     "{NS} Web View": {
         "prefix": "NSwebview",
         "body": [
             "<WebView src=\"someUrl | pathToLocalFile | htmlString\" />",
-            ""
+            "$1"
         ]
     },
     "{NS} Repeater": {
         "prefix": "NSrepeater",
         "body": [
-            "<Repeater items=\"{{  }}\">",
+            "<Repeater items=\"{{ $1 }}\">",
             "    <Repeater.itemsLayout>",
             "        <StackLayout />",
             "    </Repeater.itemsLayout>",
             "    <Repeater.itemTemplate>",
-            "        ",
+            "        $2",
             "    </Repeater.itemTemplate>",
             "</Repeater>"
         ]
@@ -285,57 +285,57 @@
         "prefix": "NSpage",
         "body": [
             "<Page xmlNS=\"http://www.nativescript.org/tNS.xsd\" loaded=\"onLoaded\" navigatedTo=\"onNavigatedTo\">",
-            "    ",
+            "    $1",
             "</Page>"
         ]
     },
     "{NS} Image": {
         "prefix": "NSimg",
         "body": [
-            "<Image src=\"\" stretch=\"none\" />",
-            ""
+            "<Image src=\"$1\" stretch=\"none\" />",
+            "$2"
         ]
     },
     "{NS} Label": {
         "prefix": "NSlabel",
         "body": [
-            "<Label text=\"\" textWrap=\"true\" />",
-            ""
+            "<Label text=\"$1\" textWrap=\"true\" />",
+            "$2"
         ]
     },
     "{NS} Button": {
         "prefix": "NSbtn",
         "body": [
-            "<Button text=\"\" tap=\"\" />",
+            "<Button text=\"$1\" tap=\"$2\" />",
             "$3"
         ]
     },
     "{NS} Text Field": {
         "prefix": "NStextfield",
         "body": [
-            "<TextField hint=\"\" text=\"{{  }}\" />",
+            "<TextField hint=\"$1\" text=\"{{ $2 }}\" />",
             "$3"
         ]
     },
     "{NS} Password Field": {
         "prefix": "NSpassword",
         "body": [
-            "<TextField hint=\"Enter your password.\" text=\"{{  }}\" secure=\"true\" />",
-            ""
+            "<TextField hint=\"Enter your password.\" text=\"{{ $1 }}\" secure=\"true\" />",
+            "$2"
         ]
     },
     "{NS} Editable TextView": {
         "prefix": "NStextview_editable",
         "body": [
-            "<TextView hint=\"\" text=\"{{  }}\" editable=\"true\" />",
+            "<TextView hint=\"$1\" text=\"{{ $2 }}\" editable=\"true\" />",
             "$3"
         ]
     },
     "{NS} Non-Editable TextView": {
         "prefix": "NStextview_non-editable",
         "body": [
-            "<TextView text=\"{{  }}\" editable=\"false\" />",
-            ""
+            "<TextView text=\"{{ $1 }}\" editable=\"false\" />",
+            "$2"
         ]
     },
     "{NS} SearchBar": {
@@ -348,50 +348,50 @@
     "{NS} Switch": {
         "prefix": "NSswitch",
         "body": [
-            "<Switch checked=\"{{  }}\" />",
-            ""
+            "<Switch checked=\"{{ $1 }}\" />",
+            "$2"
         ]
     },
     "{NS} Progress Bar": {
         "prefix": "NSprogress",
         "body": [
-            "<Progress value=\"{{  }}\" />",
-            ""
+            "<Progress value=\"{{ $1 }}\" />",
+            "$2"
         ]
     },
     "{NS} Slider": {
         "prefix": "NSslider",
         "body": [
-            "<Slider minValue=\"\" maxValue=\"\" value=\"{{ $3 }}\" />",
+            "<Slider minValue=\"$1\" maxValue=\"$2\" value=\"{{ $3 }}\" />",
             "$4"
         ]
     },
     "{NS} Date Picker": {
         "prefix": "NSdate",
         "body": [
-            "<DatePicker day=\"\" month=\"\" year=\"$3\"></DatePicker>",
+            "<DatePicker day=\"$1\" month=\"$2\" year=\"$3\"></DatePicker>",
             "$4"
         ]
     },
     "{NS} Time Picker": {
         "prefix": "NStime",
         "body": [
-            "<TimePicker hour=\"\" minute=\"\"></TimePicker>",
+            "<TimePicker hour=\"$1\" minute=\"$2\"></TimePicker>",
             "$3"
         ]
     },
     "{NS} List Picker": {
         "prefix": "NSlistpicker",
         "body": [
-            "<ListPicker items=\"{{  }}\" selectedIndex=\"\"></ListPicker>",
+            "<ListPicker items=\"{{ $1 }}\" selectedIndex=\"$2\"></ListPicker>",
             "$3"
         ]
     },
     "{NS} Activity Indicator": {
         "prefix": "NSactivityIndicator",
         "body": [
-            "<ActivityIndicator width=\"100\" height=\"100\" busy=\"{{  }}\" />",
-            ""
+            "<ActivityIndicator width=\"100\" height=\"100\" busy=\"{{ $1 }}\" />",
+            "$2"
         ]
     },
     "{NS} Segmented Bar": {
@@ -402,7 +402,7 @@
             "        <SegmentedBarItem title=\"First\" />",
             "        <SegmentedBarItem title=\"Second\" />",
             "        <SegmentedBarItem title=\"Third\" />",
-            "        ",
+            "        $1",
             "    </SegmentedBar.items>",
             "</SegmentedBar>"
         ]
@@ -410,7 +410,7 @@
     "{NS} Border": {
         "prefix": "NSborder",
         "body": [
-            "<Border borderRadius=\"\" borderWidth=\"\" borderColor=\"#000000\">",
+            "<Border borderRadius=\"$1\" borderWidth=\"$2\" borderColor=\"#000000\">",
             "    $3",
             "</Border>"
         ]
@@ -431,55 +431,55 @@
     // Attributes
     "{NS} Color Attribute": {
         "prefix": "color",
-        "body": "color=\"\""
+        "body": "color=\"$1\"$2"
     },
     "{NS} CSS Class Attribute": {
         "prefix": "class",
-        "body": "class=\"\""
+        "body": "class=\"$1\"$2"
     },
     "{NS} Left Attribute": {
         "prefix": "left",
-        "body": "left=\"\""
+        "body": "left=\"$1\"$2"
     },
     "{NS} Right Attribute": {
         "prefix": "right",
-        "body": "right=\"\""
+        "body": "right=\"$1\"$2"
     },
     "{NS} Top Attribute": {
         "prefix": "top",
-        "body": "top=\"\""
+        "body": "top=\"$1\"$2"
     },
     "{NS} Bottom Attribute": {
         "prefix": "bottom",
-        "body": "bottom=\"\""
+        "body": "bottom=\"$1\"$2"
     },
     "{NS} Text Attribute": {
         "prefix": "text",
-        "body": "text=\"\""
+        "body": "text=\"$1\"$2"
     },
     "{NS} Margin Attribute": {
         "prefix": "margin",
-        "body": "margin=\"\""
+        "body": "margin=\"$1\"$2"
     },
     "{NS} Opacity Attribute": {
         "prefix": "opacity",
-        "body": "opacity=\"\""
+        "body": "opacity=\"$1\"$2"
     },
     "{NS} Background Color Attribute": {
         "prefix": "bgColor",
-        "body": "backgroundColor=\"\""
+        "body": "backgroundColor=\"$1\"$2"
     },
     "{NS} Background Image Attribute": {
         "prefix": "bgImage",
-        "body": "backgroundImage=\"\""
+        "body": "backgroundImage=\"$1\"$2"
     },
     "{NS} Border Color Attribute": {
         "prefix": "borderColor",
-        "body": "borderColor=\"\""
+        "body": "borderColor=\"$1\"$2"
     },
     "{NS} Border Width Attribute": {
         "prefix": "borderWidth",
-        "body": "borderWidth=\"\""
+        "body": "borderWidth=\"$1\"$2"
     },
 
     "{NS} IOS Safe Area Attribute": {
@@ -488,20 +488,20 @@
     },
     "{NS} Translate X Attribute": {
         "prefix": "translateX",
-        "body": "translateX=\"\""
+        "body": "translateX=\"$1\""
     },
     "{NS} Translate Y Attribute": {
         "prefix": "translateY",
-        "body": "translateY=\"\""
+        "body": "translateY=\"$1\""
     },
     "{NS} Style Attribute": {
         "prefix": "style",
-        "body": "style=\"\""
+        "body": "style=\"$1\""
     },
 
     "{NS} xmlns Attribute": {
         "prefix": "xmlns",
-        "body": "xmlns:=\"\""
+        "body": "xmlns:$1=\"$2\""
     },
     "{NS} action Bar Hidden Attribute": {
         "prefix": "actionBarHidden",
@@ -510,98 +510,98 @@
 
     "{NS} Icon Attribute": {
         "prefix": "icon",
-        "body": "icon=\"res://\""
+        "body": "icon=\"res://$1\"$2"
     },
 
     "{NS} Text Wrap Attribute": {
         "prefix": "wrap",
-        "body": "textWrap=\"true\""
+        "body": "textWrap=\"true\"$2"
     },
     "{NS} Horizontal Alignment Attribute": {
         "prefix": "halign",
-        "body": "horizontalAlignment=\"\""
+        "body": "horizontalAlignment=\"$1\"$2"
     },
     "{NS} Vertical Alignment Attribute": {
         "prefix": "valign",
-        "body": "verticalAlignment=\"\""
+        "body": "verticalAlignment=\"$1\"$2"
     },
     "{NS} Visibility Attribute": {
         "prefix": "visibility",
-        "body": "visibility=\"{{ isItemVisible ? 'visible' : 'collapsed' }}\""
+        "body": "visibility=\"{{ isItemVisible ? 'visible' : 'collapsed' }}\"$2"
     },
     "{NS} Stretch Attribute": {
         "prefix": "stretch",
-        "body": "stretch=\"fill\""
+        "body": "stretch=\"fill$1\"$2"
     },
     "{NS} Keyboard Type Attribute": {
         "prefix": "kbtype",
-        "body": "keyboardType=\"email\""
+        "body": "keyboardType=\"email$1\"$2"
     },
     "{NS} Width Attribute": {
         "prefix": "width",
-        "body": "width=\"\"",
+        "body": "width=\"$1\"$2",
         "description": "Gets or sets the width used to measure and layout each child. Default value is Number.NaN, which does not restrict children."
     },
     "{NS} Height Attribute": {
         "prefix": "height",
-        "body": "height=\"\"",
+        "body": "height=\"$1\"$2",
         "description": "Gets or sets the height used to measure and layout each child. Default value is Number.NaN, which does not restrict children."
     },
     "{NS} Item Width Attribute": {
         "prefix": "itemWidth",
-        "body": "itemWidth=\"\"",
+        "body": "itemWidth=\"$1\"$2",
         "description": "Gets or sets the width used to measure and layout each child. Default value is Number.NaN, which does not restrict children."
     },
     "{NS} Item Height Attribute": {
         "prefix": "itemHeight",
-        "body": "itemHeight=\"\"",
+        "body": "itemHeight=\"$1\"$2",
         "description": "Gets or sets the height used to measure and layout each child. Default value is Number.NaN, which does not restrict children."
     },
 
     // gestures attributes
     "{NS} tap Attribute": {
         "prefix": "tap",
-        "body": "tap=\"\"",
+        "body": "tap=\"$1\"$2",
         "description": "Action: Briefly touch the screen."
     },
     "{NS} Vue tap Attribute": {
         "prefix": "@tap",
-        "body": "@tap=\"\"",
+        "body": "@tap=\"$1\"$2",
         "description": "Action: Briefly touch the screen."
     },
     "{NS} doubleTap Attribute": {
         "prefix": "doubleTap",
-        "body": "doubleTap=\"\"",
+        "body": "doubleTap=\"$1\"$2",
         "description": "Action: Two taps in a quick succession."
     },
     "{NS} longPress Attribute": {
         "prefix": "longPress",
-        "body": "longPress=\"\"",
+        "body": "longPress=\"$1\"$2",
         "description": "Action: Press your finger against the screen for a few moments"
     },
     "{NS} pan Attribute": {
         "prefix": "pan",
-        "body": "pan=\"\"",
+        "body": "pan=\"$1\"$2",
         "description": "Action: Press your finger down and immediately start moving it around. Pans are executed more slowly and allow for more precision, and the screen stops responding as soon as the finger is lifted off it."
     },
     "{NS} pinch Attribute": {
         "prefix": "pinch",
-        "body": "pinch=\"\"",
+        "body": "pinch=\"$1\"$2",
         "description": "Action: Touch the screen using two of your fingers, then move them towards each other or away from each other."
     },
     "{NS} rotation Attribute": {
         "prefix": "rotation",
-        "body": "rotation=\"\"",
+        "body": "rotation=\"$1\"$2",
         "description": "Action: Touch the screen using two of your fingers, then rotate them simultaneously left or right."
     },
     "{NS} swipe Attribute": {
         "prefix": "swipe",
-        "body": "swipe=\"\"",
+        "body": "swipe=\"$1\"$2",
         "description": "Action: Swiftly slide your finger across the screen. Swipes are quick and affect the screen even after the finger is lifted off the screen."
     },
     "{NS} touch Attribute": {
         "prefix": "touch",
-        "body": "touch=\"\"",
+        "body": "touch=\"$1\"$2",
         "description": "Action: This is a general purpose gesture that is triggered whenever a pointer (usually a finger) has performed a touch action (up, down, move or cancel). TouchGestureEventData provides information about all the pointers currently on the screen and their position inside the view that triggered the event."
     },
 
@@ -610,102 +610,102 @@
 
     "{NS} orientation Attribute": {
         "prefix": "orientation",
-        "body": "orientation=\"\"",
+        "body": "orientation=\"$1\"$2",
         "description": "Gets or sets a value indicating whether the child items should be stacked in the horizontal or vertical direction. Possible values are vertical and horizontal. The default value is vertical."
     },
 
     // GridLayout properties
     "{NS} Row Attribute": {
         "prefix": "row",
-        "body": "row=\"\"",
+        "body": "row=\"$1\"$2",
         "description": "Gets or sets a value that indicates which row child content within a GridLayout it should appear in."
     },
     "{NS} Col Attribute": {
         "prefix": "col",
-        "body": "col=\"\"",
+        "body": "col=\"$1\"$2",
         "description": "Gets or sets a value that indicates which column child content within a GridLayout it should appear in."
     },
     "{NS} Rows Attribute": {
         "prefix": "rows",
-        "body": "rows=\"\"",
+        "body": "rows=\"$1\"$2",
         "description": "A string value representing row heights delimited with commas. Row heights can be either an absolute number, auto or *. A number indicates an absolute row height, auto makes the row as high as its highest child, and * makes the row occupy all available vertical space."
     },
     "{NS} Colums Attribute": {
         "prefix": "colums",
-        "body": "colums=\"\"",
+        "body": "colums=\"$1\"$2",
         "description": "A string value representing column widths delimited with commas. Column widths can be either an absolute number, auto or *. A number indicates an absolute column width, auto makes the column as wide as its widest child, and * makes the column occupy all available horizontal space."
     },
     "{NS} Colspan Attribute": {
         "prefix": "colspan",
-        "body": "colSpan=\"\"",
+        "body": "colSpan=\"$1\"$2",
         "description": "Gets or sets a value that indicates the total number of colums that child content spaNS within a GridLayout."
     },
     "{NS} Rowspan Attribute": {
         "prefix": "rowspan",
-        "body": "rowSpan=\"\"",
+        "body": "rowSpan=\"$1\"$2",
         "description": "Gets or sets a value that indicates the total number of rows that child content spaNS within a GridLayout."
     },
 
     // DockLayout properties
     "{NS} DockLayout Dock Attribute": {
         "prefix": "dock",
-        "body": "dock=\"\"",
+        "body": "dock=\"$1\"",
         "description": "Specifies the Dock position of a child element that is iNSide a DockLayout. Possible values are left, top, right and bottom."
     },
     "{NS} Docklayout strechLastChild Attribute": {
         "prefix": "stretchLastChild",
-        "body": "stretchLastChild=\"\"",
+        "body": "stretchLastChild=\"$1\"",
         "description": "Gets or sets a value that indicates whether the last child element within a DockLayout stretches to fill the remaining available space. The default value is true."
     },
     // FlexboxLayout properties
     "{NS} FlexboxLayout flexDirection Attribute": {
         "prefix": "flexDirection",
-        "body": "flexDirection=\"\"",
+        "body": "flexDirection=\"$1\"",
         "description": "Gets or sets a value indicating the direction flex items are placed in the flex container. The flexDirection property accepts 4 different values: row (same as text direction), row-reverse (opposite to text direction), column (same as row but top to bottom), and column-reverse (same as row-reverse top to bottom). The default value is row."
     },
     "{NS} FlexboxLayout flexWrap Attribute": {
         "prefix": "flexWrap",
-        "body": "flexWrap=\"\"",
+        "body": "flexWrap=\"$1\"",
         "description": "Gets or sets a value indicating whether the flex items are forced in a single line or can be flowed into multiple lines. If set to multiple lines, it also defines the cross-axis which determines the direction new lines are stacked in. The flexWrap property accepts 3 different values: nowrap (single-line which may cause the container to overflow), wrap (multi-lines, direction is defined by flexDirection), and wrap-reverse (multi-lines, opposite to direction defined by flexDirection). The default value is nowrap.."
     },
     "{NS} FlexboxLayout justifyContent Attribute": {
         "prefix": "justifyContent",
-        "body": "justifyContent=\"\"",
+        "body": "justifyContent=\"$1\"",
         "description": "Gets or sets a value indicating the alignment along the main axis. It helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line. The justifyContent property accepts 5 different values: flex-start (items are packed toward the start line), flex-end (items are packed toward to end line), center (items are centered along the line), space-between (items are evenly distributed in the line; first item is on the start line, last item on the end line), and space-around (items are evenly distributed in the line with equal space around them). The default value is flex-start."
     },
     "{NS} FlexboxLayout alignItems Attribute": {
         "prefix": "alignItems",
-        "body": "alignItems=\"\"",
+        "body": "alignItems=\"$1\"",
         "description": "Gets or sets a value indicating how flex items are laid out along the cross axis on the current line. You can think of it as the justifyContent version for the cross-axis (perpendicular to the main-axis). The alignItems property accepts 5 different values: flex-start (cross-start margin edge of the items is placed on the cross-start line), flex-end (cross-end margin edge of the items is placed on the cross-end line), center (items are centered in the cross-axis), baseline (items are aligned such as their baselines align), stretch (stretch to fill the container but still respect min-width/max-width). The default value is stretch."
     },
     "{NS} FlexboxLayout alignContent Attribute": {
         "prefix": "alignContent",
-        "body": "alignContent=\"\"",
+        "body": "alignContent=\"$1\"",
         "description": "Gets or sets a value that helps aligning a flex container's lines within it when there is extra space in the cross-axis, similar to how justifyContent aligns individual items within the main-axis. The alignContent property accepts 6 different values: flex-start (lines packed to the start of the container), flex-end (lines packed to the end of the container), center (lines packed to the center of the container), space-between (lines evenly distributed; the first line is at the start of the container while the last one is at the end), space-around (lines evenly distributed with equal space between them), and stretch (lines stretch to take up the remaining space). The default value is stretch. This property has no effect when the flexbox has only a single line."
     },
     "{NS} FlexboxLayout order Attribute": {
         "prefix": "order",
-        "body": "order=\"\"",
+        "body": "order=\"$1\"",
         "description": "Gets or sets a value that changes the default ordering of flex items."
     },
     "{NS} FlexboxLayout flexGrow Attribute": {
         "prefix": "flexGrow",
-        "body": "flexGrow=\"\"",
+        "body": "flexGrow=\"$1\"",
         "description": "Gets or sets a unitless value that serves as a proportion indicating whether the flex item is able to grow if necessary. It dictates what amount of the available space inside the flex container the item should take up."
     },
     "{NS} FlexboxLayout flexShrink Attribute": {
         "prefix": "flexShrink",
-        "body": "flexShrink=\"\"",
+        "body": "flexShrink=\"$1\"",
         "description": "Gets or sets a value indicating the 'flex shrink factor', which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when there is not enough space on the row. When omitted, it is set to 1 and the flex shrink factor is multiplied by the flex basis when distributing negative space."
     },
     "{NS} FlexboxLayout alignSelf Attribute": {
         "prefix": "alignSelf",
-        "body": "alignSelf=\"\"",
+        "body": "alignSelf=\"$1\"",
         "description": "Gets or sets a value that makes it possible to override the alignItems value for specific flex items. This property accepts the same 5 values as the alignItems: flex-start (cross-start margin edge of the item is placed on the cross-start line), flex-end (cross-end margin edge of the item is placed on the cross-end line), center (item is centered in the cross-axis), baseline (items are aligned such as their baseline are aligned), and stretch (stretch to fill the container but still respect min-width / max-width). The default value is stretch."
     },
     "{NS} FlexboxLayout flexWrapBefore Attribute": {
         "prefix": "flexWrapBefore",
-        "body": "flexWrapBefore=\"\"",
+        "body": "flexWrapBefore=\"$1\"",
         "description": "Gets or sets a boolean value controlling item wrapping. Setting it to true on flexbox item will force it to wrap on a new line. The default value is false. This property is not part of the official flexbox specification."
     }
 

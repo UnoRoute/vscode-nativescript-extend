@@ -10,6 +10,15 @@
 - Navivescript Preview (coming soon)
 - Nativescript intellisense (coming soon)
 
+## [1.10.27] - 2018-10-27
+
+- Newly added my updated Nativescript xsd schema, which will help you with Nativescript XML widgets, attributes and parameters validation [BETA STAGE].
+- Added Auto setup emulator. It works only if you have android path on your system path or enviroment.
+- Fixed file naming to all lowercase characters.
+- Added "redhat.vscode-xml" extension to support xml validaion.
+- Added "octref.vetur" extension to support vue sfc.
+- Updated the `README.MD`
+
 ## [1.10.21] - 2018-10-21
 
 - Improved Smart Page creation for Nativescript projects only

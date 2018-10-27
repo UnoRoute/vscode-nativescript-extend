@@ -1,31 +1,37 @@
 # NativeScript Extend for Visual Studio Code
 
-This JSON file contains snippets for all NativeScript UI core components and some frequently used attributes and describtios. This extension will only be available on Nativescript projects.
+Nativescript Extend pack contains snippets for all NativeScript UI core components , basic attributes and their descriptions, emulator runner, context menu and a xml validator. With all this listed you now have a perfect extention that will help you on your Nativescript projects This extension will only be available on Nativescript projects.
 
-This extension comes with snippets, emulator executor and a add file context menu for Nativescript project.
+This extension comes with snippets, emulator executor, context menu for Nativescript project and a XML widgets, attributes and parameter validator.
 
-All UI components are prefixed with `NS`. Attributes do not have a prefix.
+All UI layout and widget are prefixed with `NS`. Attributes do not have a prefix.
 
-#Changes
+> *Please note: To get the best out of this extension you wil have to disable or uninstall any nativescript snippets extension.*
 
-## [1.10.21] - 2018-10-21
+# Changes
 
-- Improved Smart Page creation for Nativescript projects only
-- Fixed emulator to detect nativescript projects
-- Added more attribute snippets
-- Added more parameter to snippets
-- Added plugin inteligent.
+## [1.10.27] - 2018-10-27
+
+- Newly added my updated Nativescript xsd schema, which will help you with Nativescript XML widgets, attributes and parameters validation [BETA STAGE].
+- Added Auto setup emulator. It works only if you have android path on your system path or enviroment.
+- Fixed file naming to all lowercase characters.
+- Added "redhat.vscode-xml" extension to support xml validaion.
+- Added "octref.vetur" extension to support vue sfc.
 - Updated the `README.MD`
-- Update the explorer context menu. It now creates a Page folder for every page created except for VUE which is a SFC
 
-## Features
+# Features
 
-- Emulator,
-- Snippets,
-- Explorer Context Menu Page Creation,
-- _Naivescript langauge server(coming soon) similar to nativescipt playground._
+- ### Emulator,
+![emulator](/image/emulator.gif)
+- ### Emulator auto setup
+![emulator auto setup](/image/auto%20setup.gif)
+- ### Snippets,
+![snippets](/image/snippets.gif)
+- ### Explorer Context Menu Page Creation,
+![Context Menu](/image/cm.gif)
+- ### Nativscript XML widgets, attribute and parameters validation.
 
-## UI Components
+# Snippets Components keys
 
 ### Layouts
 
@@ -63,7 +69,7 @@ All UI components are prefixed with `NS`. Attributes do not have a prefix.
 - Password Field - `NSpassword`
 - Action Item - `NSactionItem`
 
-### Newly added Attributes
+### Attributes
 
 - backgroundColor - `bgColor`
 - backgroundImage - `bgImage`
@@ -75,9 +81,6 @@ All UI components are prefixed with `NS`. Attributes do not have a prefix.
 - opacity - `opacity`
 - style - `style`
 - iosOverflowSafeArea - `iosOverflowSafeArea`
-
-### Attributes
-
 - cssClass - `class`
 - left - `left`
 - right - `right`
@@ -129,15 +132,18 @@ All UI components are prefixed with `NS`. Attributes do not have a prefix.
 - swipe - `swipe`
 - touch - `touch`
 
-## How to use
+# How to use Nativescript Extend 
 
-Just setup your the android emulator path on your setting panel
+- Install Nativescript Extend from VScode marketplace
+- Active the extension
+- Create/run a Nativescript project
+- Nativescript detects a NS project and auto enable the emulator and ask to add xml validation for the project
+- Right click on the explorer panel area and create your prefered project framework
+- Open the xml file of html and get Nativescript Extend snippet
+- type NS for widget and layouts
+- type your prefered attributes. Attributes dont need any prefix
 
-nativescript-extend.emulatorPath
-
-to enable the emulator
-
-### MIT License
+# MIT License
 
 Copyright (c) 2018 Paul Ehigie
 
