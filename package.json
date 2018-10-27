@@ -7,7 +7,7 @@
     "publisher": "Paul-Ehigie-Paul",
     "repository": {
         "type": "git",
-        "url": "https://gitlab.com/ehigiepaul/vscode-nativescript-extend.git"
+        "url": "https://gitlab.com/ehigiepaul/vscode-nativescript-extend"
     },
     "engines": {
         "vscode": "^1.28.0"
