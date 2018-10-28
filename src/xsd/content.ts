@@ -1,6 +1,6 @@
 export var content =`<?xml version="1.0"?>
 <!--SCHEMA VERSION: 2.0.0-->
-<xs:schema id="tns" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.nativescript.org/tns.xsd" xmlns="http://schemas.nativescript.org/tns.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  elementFormDefault="qualified" attributeFormDefault="unqualified">
     <!-- ActionBar sections -->
     <xs:attributeGroup name="actionBarAttributes">
         <xs:attribute name="title" type="StringValidator" />

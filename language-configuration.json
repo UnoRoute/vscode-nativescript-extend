@@ -31,10 +31,9 @@
         ["'", "'"]
     ],
     "folding": {
-        "offSide": true,
         "markers": {
-            "start": "^\\s*//#region",
-            "end": "^\\s*//#endregion"
+            "start": "^<(page|template|style|script)*>",
+            "end": "^</(page|template|style|script)*>"
         }
     },
     "wordPattern": "(-?\\d*\\.\\d\\w*)|([^\\`\\~\\!\\@\\#\\%\\^\\&\\*\\(\\)\\-\\=\\+\\[\\{\\]\\}\\\\\\|\\;\\:\\'\\\"\\,\\.\\<\\>\\/\\?\\s]+)"
