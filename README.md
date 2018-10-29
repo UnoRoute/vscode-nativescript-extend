@@ -33,17 +33,17 @@ This extension comes with snippets, emulator executor, context menu for Nativesc
 
 # Features
 - ### Nativescript intellisense and XML validation.
-![intellisense](https://gitlab.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/intellisense.gif)
+![intellisense](https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/intellisense.gif)
 - ### Emulator
-![emulator](https://gitlab.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/emulator.gif)
+![emulator](https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/emulator.gif)
 - ### Emulator auto setup
-![emulator auto setup](https://gitlab.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/auto%20setup.gif)
+![emulator auto setup](https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/auto%20setup.gif)
 - ### Snippets
-![snippets](https://gitlab.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/snippets.gif)
+![snippets](https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/snippets.gif)
 - ### Snippets toggler
-![snippets](https://gitlab.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/toggle snippets.gif)
+![snippets](https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/toggle%20snippets.gif)
 - ### Explorer Context Menu Page Creation,
-![Context Menu](https://gitlab.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/cm.gif)
+![Context Menu](https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/cm.gif)
 
 
 # Snippets Components keys
