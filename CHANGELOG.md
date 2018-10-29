@@ -10,6 +10,15 @@
 - Navivescript Preview (coming soon)
 - Nativescript intellisense (coming soon)
 
+## [1.10.29] - 2018-10-29
+
+- Nativescript intellisense is now available.
+- Fixed and update Nativescript xsd schema, which will help you with Nativescript XML widgets, attributes and parameters validation.
+- Added Snippet toggler to enable adn disable snippets.
+- Fix Nativescript extend emulator to run on selected versions
+- Added a custom version of "redhat.vscode-xml" extension to support xml validaion and intelisense.
+- Updated the `README.MD`
+
 ## [1.10.27] - 2018-10-27
 
 - Newly added my updated Nativescript xsd schema, which will help you with Nativescript XML widgets, attributes and parameters validation [BETA STAGE].

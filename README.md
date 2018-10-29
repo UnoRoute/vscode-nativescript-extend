@@ -1,35 +1,50 @@
-# NativeScript Extend for Visual Studio Code
+<div align="center">
+<h1>NativeScript Extend for Visual Studio Code</h1>
 
-Nativescript Extend pack contains snippets for all NativeScript UI core components , basic attributes and their descriptions, emulator runner, context menu and a xml validator. With all this listed you now have a perfect extention that will help you on your Nativescript projects This extension will only be available on Nativescript projects.
+[![vscode](https://img.shields.io/badge/vscode-v1.28+-373277.svg?style=for-the-badge)](https://code.visualstudio.com/updates/v1_28) [![made in nigeria](https://img.shields.io/badge/made%20in-nigeria-008751.svg?style=for-the-badge)](https://github.com/acekyd/made-in-nigeria) [![Marketplace Version](https://vsmarketplacebadge.apphb.com/version/paul-ehigie-paul.nativescript-extend.svg?style=for-the-badge "Current Release")](https://marketplace.visualstudio.com/items?itemName=paul-ehigie-paul.nativescript-extend)
 
-This extension comes with snippets, emulator executor, context menu for Nativescript project and a XML widgets, attributes and parameter validator.
+</div>
+Nativescript Extend pack contains snippets for all NativeScript UI core components , basic attributes and their descriptions, emulator runner, context menu and a xml intellisence and validator. With all this listed you now have a perfect extention that will help you on your Nativescript projects This extension will only be available on Nativescript projects.
 
-All UI layout and widget are prefixed with `NS`. Attributes do not have a prefix.
+This extension comes with snippets, emulator executor, context menu for Nativescript project, snippet toggler and a XML widgets, attributes, parameter validator and intelisense.
+
+* All UI layout and widget are prefixed with `NS`. Attributes do not have a prefix.
+* You can toggle the snippets off and on, if you and to use the xml intellisense.
+
+<div align="left">
+
+## **Thanks to**
+![RED HAT Developers](https://developers.redhat.com) for the fast support in making the  intellisense better.
+
+</div>
 
 > *Please note: To get the best out of this extension you wil have to disable or uninstall any nativescript snippets extension.*
 
 # Changes
 
-## [1.10.27] - 2018-10-27
+## [1.10.29] - 2018-10-29
 
-- Newly added my updated Nativescript xsd schema, which will help you with Nativescript XML widgets, attributes and parameters validation [BETA STAGE].
-- Added Auto setup emulator. It works only if you have android path on your system path or enviroment.
-- Fixed file naming to all lowercase characters.
-- Added "redhat.vscode-xml" extension to support xml validaion.
-- Added "octref.vetur" extension to support vue sfc.
+- Nativescript intellisense is now available.
+- Fixed and update Nativescript xsd schema, which will help you with Nativescript XML widgets, attributes and parameters validation.
+- Added Snippet toggler to enable adn disable snippets.
+- Fix Nativescript extend emulator to run on selected versions
+- Added a custom version of "redhat.vscode-xml" extension to support xml validaion and intelisense.
 - Updated the `README.MD`
 
 # Features
-
-- ### Emulator,
+- ### Nativescript intellisense and XML validation.
+![intellisense](https://gitlab.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/intellisense.gif)
+- ### Emulator
 ![emulator](https://gitlab.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/emulator.gif)
 - ### Emulator auto setup
 ![emulator auto setup](https://gitlab.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/auto%20setup.gif)
-- ### Snippets,
+- ### Snippets
 ![snippets](https://gitlab.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/snippets.gif)
+- ### Snippets toggler
+![snippets](https://gitlab.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/toggle snippets.gif)
 - ### Explorer Context Menu Page Creation,
 ![Context Menu](https://gitlab.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/cm.gif)
-- ### Nativscript XML widgets, attribute and parameters validation.
+
 
 # Snippets Components keys
 

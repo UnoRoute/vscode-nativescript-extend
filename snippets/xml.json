@@ -1,5 +1,4 @@
 {
-    "$schema": "http://schemas.nativescript.org/tns.xsd",
     /* #region */
     // Action Bar
     "{NS} Action Bar": {

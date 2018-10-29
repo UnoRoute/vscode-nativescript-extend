@@ -56,10 +56,6 @@ export class xsd {
         var schema = join(vscode.workspace.rootPath, 'schema', 'tns.xsd').replace(/(\s+)/g,"%20")
         vscode.workspace.getConfiguration('xml').update('fileAssociations', [
             {
-                "systemId": "http://schemas.nativescript.org/tns.xsd",
-                "pattern": "schema/tns.xsd"
-            },
-            {
                 "systemId": schema,
                 "pattern": "**/**/*.xml"
             },
@@ -68,8 +64,6 @@ export class xsd {
         vscode.workspace.getConfiguration('files').update("exclude",{
             "schema":true
         },false)
-
-        vscode.workspace.getConfiguration("editor").update("snippetSuggestions","top",false)
     }
     /**
      * 

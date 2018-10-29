@@ -177,7 +177,7 @@ export class ${inputToUpperCase(name)}Module { }
 
   xml(name: string): string {
     return `
-<Page loaded="pageLoaded" class="page" xmlns="http://schemas.nativescript.org/tns.xsd">
+<Page loaded="pageLoaded" class="page">
 
 	<ActionBar title="${name}" class="action-bar">
 	</ActionBar>

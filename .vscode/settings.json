@@ -1,7 +1,7 @@
 // Place your settings in this file to overwrite default and user settings.
 {
     "files.exclude": {
-        "out": false // set this to true to hide the "out" folder with the compiled JS files
+        // "schema": true
     },
     "search.exclude": {
         "out": true // set this to false to include "out" folder in search results
@@ -19,10 +19,15 @@
     //         "pattern": "**/*.xml"
     //     },
     // ],
-    "xmlLang.xmlAssociations": [
+
+    "xml.fileAssociations": [{
+            "systemId": "http://schemas.nativescript.org/tns.xsd",
+            "pattern": "schema/tns.xsd"
+        },
         {
-            "systemId": "D:\\USER\\Projects\\vscode%20plugins\\vscode-nativescript-extend\\tns.xsd",
-            "fileNamePattern":"**/*.xml"
+            "systemId": "d:\\USER\\Projects\\vscode%20plugins\\vscode-nativescript-extend\\schema\\tns.xsd",
+            "pattern": "**/**/*.xml"
         }
-    ]
+    ],
+    "editor.snippetSuggestions": "top"
 }

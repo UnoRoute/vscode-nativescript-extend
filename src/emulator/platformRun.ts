@@ -3,7 +3,6 @@ import * as vscode from 'vscode'
 import * as os from 'os'
 import { util } from "./util";
 import { join } from "path";
-import { Emulator } from "./Emulator";
 
 /**
  * @author Paul Ehigie Paul
@@ -21,7 +20,7 @@ export class platformRun extends emulatorPref implements IEmulator {
   }
 
   /**
-     *
+     * Show the Nativescript emulator statue bar
      */
   async showStatuBar(text?: string, command?: string) {
     this.statusBar.text = text || 'Run Emulator'
@@ -33,12 +32,18 @@ export class platformRun extends emulatorPref implements IEmulator {
     // TODO implement here
   }
 
+  /**
+   *  show the list of available emulator version
+   * @param platform this will be the selected emulator platform you choose
+   */
   pickVersion(platform: string): void {
     switch (platform) {
       case 'android':
         vscode.window.showQuickPick(this.emulatorVersion).then(async res => {
-          await this.showStatuBar(`Running ${res}`, "")
-          var me = this.runVersion(res)
+          if (res) {
+            await this.showStatuBar(`Running ${res}`, "")
+            this.runVersion(res)
+          }
         })
         break;
       case 'ios':

@@ -38,9 +38,9 @@ export class Emulator extends platformRun {
   /**
    * this checks if the emulator is setup and prompts the user to setup or never show the prompt again
    */
-  private async setup() {
+  private  setup() {
     var check = vscode.workspace.getConfiguration("nativescript-extend").get("emulatorPath")
-    var androidPath = await process.env.android_home || process.env.android_sdk_root;
+    var androidPath =  process.env.android_home || process.env.android_sdk_root;
     var emuPlatformExec
 
     switch (os.platform()) {
@@ -58,13 +58,13 @@ export class Emulator extends platformRun {
     }
 
 
-    if (check == null) {
+    if (check == "") {
       vscode.window.showInformationMessage('Setting up android emulator path vscode');
       if (!androidPath) {
         vscode.window.showInformationMessage('Try and configure your android sdk');
         console.log("not avaliable");
       } else {
-        vscode.workspace.getConfiguration('nativescript-extend').update('emulatorPath', join(androidPath, 'emulator', emuPlatformExec), false)
+        vscode.workspace.getConfiguration('nativescript-extend').update('emulatorPath', join(androidPath, 'emulator', emuPlatformExec),true)
         vscode.window.showInformationMessage('Android emulator path found and ready to use');
       }
     }
