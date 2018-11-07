@@ -84,7 +84,7 @@ export function xml(context: vscode.ExtensionContext) {
         return languageClient.sendRequest(TagCloseRequest.type, param);
       };
 
-      disposable = activateTagClosing(tagRequestor, { xml: true, xsl: true }, 'xml.completion.autoCloseTags');
+      disposable = activateTagClosing(tagRequestor, { xml: true, xsl: true }, 'nativescript-extend.completion.autoCloseTags');
       toDispose.push(disposable);
     });
     languages.setLanguageConfiguration('xml', getIndentationRules());
@@ -93,7 +93,8 @@ export function xml(context: vscode.ExtensionContext) {
 
   function getSettings(): JSON {
     let configXML = workspace.getConfiguration();
-    configXML = configXML.get('xml');
+    configXML = configXML.get('nativescript-extend');
+    var schema = path.join('schema', 'tns.xsd').replace(/(\s+)/g,"%20")
     let settings: JSON;
     if (!configXML) {
       const defaultValue = {
@@ -108,7 +109,11 @@ export function xml(context: vscode.ExtensionContext) {
           splitAttributes: false
         },
         completion: {
-          autoCloseTags: false
+          autoCloseTags: true
+        },
+        fileAssociation:{
+          systemId:schema,
+          pattern:'**/**/*.xml'
         }
       }
       const x = JSON.stringify(defaultValue);
@@ -124,11 +129,11 @@ export function xml(context: vscode.ExtensionContext) {
 
 function verifyAutoClosing() {
   let configXML = workspace.getConfiguration();
-  let closeTags = configXML.get("xml.completion.autoCloseTags");
+  let closeTags = configXML.get("nativescript-extend.completion.autoCloseTags");
   let closeBrackets = configXML.get("[xml]")["editor.autoClosingBrackets"];
   if (closeTags && closeBrackets != "never") {
     window.showWarningMessage(
-      "The [xml].editor.autoClosingBrackets setting conflicts with xml.completion.autoCloseTags. It's recommended to disable it.",
+      "The [xml].editor.autoClosingBrackets setting conflicts with nativescript-extend.completion.autoCloseTags. It's recommended to disable it.",
       "Disable",
       "Ignore").then((selection) => {
         if (selection == "Disable") {
@@ -146,7 +151,7 @@ function verifyAutoClosing() {
 }
 
 function verifyVMArgs() {
-  let currentVMArgs = workspace.getConfiguration("xml.server").get("vmargs");
+  let currentVMArgs = workspace.getConfiguration("nativescript-extend.server").get("vmargs");
   if(vmArgsCache != undefined) {
     if(vmArgsCache != currentVMArgs) {
       window.showWarningMessage(

@@ -2,7 +2,7 @@
     "name": "nativescript-extend",
     "displayName": "Nativescript Extend",
     "description": "Nativescript extend tool pack, helps Nativescript developers create cross-platform mobiles easliy with the support of snippets, a xml validator and a run emulator from VSCode",
-    "version": "1.10.29",
+    "version": "1.11.7",
     "icon": "image/icon.png",
     "publisher": "Paul-Ehigie-Paul",
     "repository": {
@@ -144,7 +144,7 @@
                     "description": "The will enable snippet for the xml, vue and html files",
                     "scope": "window"
                 },
-                "xml.trace.server": {
+                "nativescript-extend.trace.server": {
                     "type": "string",
                     "enum": [
                         "off",
@@ -155,7 +155,7 @@
                     "description": "Traces the communication between VS Code and the XML language server.",
                     "scope": "window"
                 },
-                "xml.catalogs": {
+                "nativescript-extend.catalogs": {
                     "type": "array",
                     "default": [],
                     "items": {
@@ -164,42 +164,42 @@
                     "description": "Array of XML Catalogs",
                     "scope": "window"
                 },
-                "xml.logs.client": {
+                "nativescript-extend.logs.client": {
                     "type": "boolean",
                     "default": true,
                     "description": "Should the server log to client output"
                 },
-                "xml.format.splitAttributes": {
+                "nativescript-extend.format.splitAttributes": {
                     "type": "boolean",
                     "default": false,
                     "description": "Split multiple attributes each onto a new line",
                     "scope": "window"
                 },
-                "xml.format.joinCDATALines": {
+                "nativescript-extend.format.joinCDATALines": {
                     "type": "boolean",
                     "default": false,
                     "description": "Join lines in a CDATA tag's content",
                     "scope": "window"
                 },
-                "xml.format.joinContentLines": {
+                "nativescript-extend.format.joinContentLines": {
                     "type": "boolean",
                     "default": false,
                     "description": "Join lines in an element's content",
                     "scope": "window"
                 },
-                "xml.format.joinCommentLines": {
+                "nativescript-extend.format.joinCommentLines": {
                     "type": "boolean",
                     "default": false,
                     "description": "Join comment content on format",
                     "scope": "window"
                 },
-                "xml.format.enabled": {
+                "nativescript-extend.format.enabled": {
                     "type": "boolean",
                     "default": true,
                     "description": "Enable/disable ability to format document",
                     "scope": "window"
                 },
-                "xml.fileAssociations": {
+                "nativescript-extend.fileAssociations": {
                     "type": "array",
                     "default": [],
                     "items": {
@@ -224,13 +224,13 @@
                     "markdownDescription": "Allows XML schemas to be associated to file name patterns.\n\nExample:\n```json\n[{\n  \"systemId\": \"path/to/file.xsd\",\n  \"pattern\": \"file1.xml\"\n},\n{\n  \"systemId\": \"http://www.w3.org/2001/XMLSchema.xsd\",\n  \"pattern\": \"**/*.xsd\"\n}]\n```",
                     "scope": "resource"
                 },
-                "xml.completion.autoCloseTags": {
+                "nativescript-extend.completion.autoCloseTags": {
                     "type": "boolean",
                     "default": true,
                     "description": "Enable/disable autoclosing of XML tags. \n\nIMPORTANT: Turn off editor.autoClosingTags for this to work",
                     "scope": "resource"
                 },
-                "xml.server.vmargs": {
+                "nativescript-extend.server.vmargs": {
                     "type": [
                         "string",
                         "null"
@@ -283,3 +283,4 @@
         "typescript": "^3.0.3"
     }
 }
+

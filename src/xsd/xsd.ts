@@ -14,7 +14,7 @@ export class xsd {
     public constructor(private context: vscode.ExtensionContext) {
         this.main()
         this.checkValidation()
-
+        this.updateXsd()
     }
 
     /**
@@ -27,7 +27,6 @@ export class xsd {
                 this.setConfig()
             })
         )
-        // TODO implement here
     }
 
     /**
@@ -36,6 +35,7 @@ export class xsd {
      */
     checkValidation(): void {
         var schema = join(vscode.workspace.rootPath, 'schema', 'tns.xsd')
+        var config = join(vscode.workspace.rootPath, '.vscode', 'settings.json')
         exists(schema, (exists) => {
             if (!exists) {
                 vscode.window.showInformationMessage("Nativescript Extend has detected a Nativescript Project open. It can assist you with Xml code completion and validation. \n Do you want to enable it on this project ?", { modal: false }, 'YES', 'NO').then(d => {
@@ -51,6 +51,12 @@ export class xsd {
             }
         })
 
+        exists(config,exists=>{
+            if(!exists){
+                this.setConfig()
+            }
+        })
+
     }
 
     /**
@@ -58,18 +64,10 @@ export class xsd {
      */
     setConfig() {
         var schema = join(vscode.workspace.rootPath, 'schema', 'tns.xsd').replace(/(\s+)/g,"%20")
-        vscode.workspace.getConfiguration('xml').update('fileAssociations', [
+        vscode.workspace.getConfiguration('nativescript-extend').update('fileAssociations', [
             {
                 "systemId": schema,
-                "pattern": "**/**/*.xml",
-                "fileNamePattern":"**/**/*.xml"
-            },
-        ],false)
-        vscode.workspace.getConfiguration('xml').update('xmlAssociations', [
-            {
-                "systemId": schema,
-                "pattern": "**/**/*.xml",
-                "fileNamePattern":"**/**/*.xml"
+                "pattern": "**/**/*.xml"
             },
         ],false)
 
@@ -84,9 +82,21 @@ export class xsd {
 
         shell.mkdir(join(vscode.workspace.rootPath, 'schema'))
         writeFile(join(vscode.workspace.rootPath, 'schema', 'tns.xsd'), content, (err) => {
-            vscode.window.showInformationMessage('Nativescript code completion and validation is added')
+            vscode.window.showInformationMessage('Nativescript code completion and validation is ready on this project')
         })
         // TODO implement here
+    }
+
+    /**
+     * remove and add the new extension config
+     */
+    async updateXsd(){
+       var check = vscode.workspace.getConfiguration('xml').has('fileAssociations')
+       if(check){
+          await shell.rm(join(vscode.workspace.rootPath,'.vscode','settings.json'))
+         this.setConfig()
+       
+       }
     }
 
 }

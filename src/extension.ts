@@ -5,6 +5,7 @@ import { contextMenu } from "./Context_Menu/contextMenu";
 import { xsd } from "./xsd/xsd";
 import { snippet } from "./snippets/snippets";
 import { xml } from "./xml/extension";
+// import { validation } from "./validation/validation";
 
 
 export function activate(context: vscode.ExtensionContext) {
@@ -17,6 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
   new xsd(context);
   new snippet(context);
   xml(context)
+  // new validation(context)
 }
 
 export function deactivate() { }

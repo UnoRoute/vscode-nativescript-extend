@@ -11,25 +11,20 @@ This extension comes with snippets, emulator executor, context menu for Nativesc
 * All UI layout and widget are prefixed with `NS`. Attributes do not have a prefix.
 * You can toggle the snippets off and on, if you and to use the xml intellisense.
 
-<div align="left">
-
-## **Thanks to**
-![RED HAT Developers](https://developers.redhat.com) for the fast support in making the  intellisense better.
-
-</div>
 
 > *Please note: To get the best out of this extension you wil have to disable or uninstall any nativescript snippets extension.*
 
 # Changes
 
-## [1.10.29] - 2018-10-29
+## [1.11.7] - 2018-11-7
 
 - Nativescript intellisense is now available.
-- Fixed and update Nativescript xsd schema, which will help you with Nativescript XML widgets, attributes and parameters validation.
-- Added Snippet toggler to enable adn disable snippets.
-- Fix Nativescript extend emulator to run on selected versions
-- Added a custom version of "redhat.vscode-xml" extension to support xml validaion and intelisense.
-- Updated the `README.MD`
+- Fixed xml setup config.
+- Updated the nativescript schema
+- Fixed xml validation error on root node.
+- Fix Nativescript extend emulator tab order
+
+
 
 # Features
 - ### Nativescript intellisense and XML validation.
@@ -154,7 +149,7 @@ This extension comes with snippets, emulator executor, context menu for Nativesc
 - Create/run a Nativescript project
 - Nativescript detects a NS project and auto enable the emulator and ask to add xml validation for the project
 - Right click on the explorer panel area and create your prefered project framework
-- Open the xml file of html and get Nativescript Extend snippet
+- Open a xml/html/vue file and get Nativescript Extend snippet
 - type NS for widget and layouts
 - type your prefered attributes. Attributes dont need any prefix
 
