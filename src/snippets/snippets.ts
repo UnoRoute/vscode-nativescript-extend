@@ -4,7 +4,7 @@ import { join, parse } from 'path';
 import download from "download"
 
 export class snippet {
-    bar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right)
+    bar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 70)
     constructor(private context: vscode.ExtensionContext) {
 
         this.main()

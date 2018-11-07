@@ -31,15 +31,16 @@ export class xsd {
     }
 
     /**
-     * 
+     * Auto check if the schema is available on the user workspace
+     * if not, ask user to insert it.
      */
     checkValidation(): void {
         var schema = join(vscode.workspace.rootPath, 'schema', 'tns.xsd')
         exists(schema, (exists) => {
             if (!exists) {
-                vscode.window.showInformationMessage("Nativescript Extend detected a Nativescript Project. It can help you with your xml validation. \n Do you want to enable it on this project", { modal: false }, 'yes', 'no').then(d => {
+                vscode.window.showInformationMessage("Nativescript Extend has detected a Nativescript Project open. It can assist you with Xml code completion and validation. \n Do you want to enable it on this project ?", { modal: false }, 'YES', 'NO').then(d => {
                     switch (d) {
-                        case 'yes':
+                        case 'YES':
                             this.copyXsd()
                             this.setConfig()
                             break;
@@ -52,12 +53,23 @@ export class xsd {
 
     }
 
+    /**
+     * Add configuration to the users setings
+     */
     setConfig() {
         var schema = join(vscode.workspace.rootPath, 'schema', 'tns.xsd').replace(/(\s+)/g,"%20")
         vscode.workspace.getConfiguration('xml').update('fileAssociations', [
             {
                 "systemId": schema,
-                "pattern": "**/**/*.xml"
+                "pattern": "**/**/*.xml",
+                "fileNamePattern":"**/**/*.xml"
+            },
+        ],false)
+        vscode.workspace.getConfiguration('xml').update('xmlAssociations', [
+            {
+                "systemId": schema,
+                "pattern": "**/**/*.xml",
+                "fileNamePattern":"**/**/*.xml"
             },
         ],false)
 
@@ -66,13 +78,13 @@ export class xsd {
         },false)
     }
     /**
-     * 
+     * Create a tns.xsd schema on the user workspace
      */
     copyXsd(): void {
 
         shell.mkdir(join(vscode.workspace.rootPath, 'schema'))
         writeFile(join(vscode.workspace.rootPath, 'schema', 'tns.xsd'), content, (err) => {
-            vscode.window.showInformationMessage('Nativescript XML schema added')
+            vscode.window.showInformationMessage('Nativescript code completion and validation is added')
         })
         // TODO implement here
     }
