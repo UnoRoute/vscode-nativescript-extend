@@ -8,8 +8,7 @@ export class contents
     IAngularContents,
     IJavascriptContent {
   viewModelTs(name: string): string {
-    return `
-import { Observable } from 'tns-core-modules/data/observable';
+    return `import { Observable } from 'tns-core-modules/data/observable';
 
 export class ${inputToUpperCase(name)}ViewModel extends Observable {
     constructor() {
@@ -20,8 +19,7 @@ export class ${inputToUpperCase(name)}ViewModel extends Observable {
   }
 
   ts(name: string): string {
-    return `
-import { EventData } from 'tns-core-modules/data/observable';
+    return `import { EventData } from 'tns-core-modules/data/observable';
 import { StackLayout } from 'tns-core-modules/ui/layouts/stack-layout';
 import { ${inputToUpperCase(name)}ViewModel } from './${name}-view-model';
 
@@ -34,8 +32,7 @@ export function pageLoaded(args: EventData) {
   }
 
   vueFile(name: string): string {
-    return `
-<template>
+    return `<template>
     <Page class="page">
         <ActionBar title="Home" class="action-bar" />
         <ScrollView>
@@ -74,8 +71,7 @@ export default {
   }
 
   html(name: string): string {
-    return `
-<ActionBar title="Home" class="action-bar">
+    return `<ActionBar title="Home" class="action-bar">
 </ActionBar>
 
 <GridLayout>
@@ -94,8 +90,7 @@ export default {
   }
 
   componentTs(name: string): string {
-    return `
-import { Component, OnInit } from "@angular/core";
+    return `import { Component, OnInit } from "@angular/core";
 @Component({
     selector: "${name}",
     moduleId: module.id,
@@ -114,8 +109,7 @@ export class ${inputToUpperCase(name)}Component implements OnInit {
   }
 
   moduleTs(name: string): string {
-    return `
-import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
+    return `import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptCommonModule } from "nativescript-angular/common";
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
@@ -156,8 +150,7 @@ export class ${inputToUpperCase(name)}Module { }
   }
 
   routingModule(name: string): string {
-    return `
-    import { NgModule } from "@angular/core";
+    return `import { NgModule } from "@angular/core";
     import { Routes } from "@angular/router";
     import { NativeScriptRouterModule } from "nativescript-angular/router";
     
@@ -176,8 +169,7 @@ export class ${inputToUpperCase(name)}Module { }
   }
 
   xml(name: string): string {
-    return `
-<Page loaded="pageLoaded" class="page">
+    return `<Page loaded="pageLoaded" class="page">
 
 	<ActionBar title="${name}" class="action-bar">
 	</ActionBar>
@@ -197,8 +189,7 @@ export class ${inputToUpperCase(name)}Module { }
   }
 
   css(name: string): string {
-    return `
-.btn {
+    return `.btn {
     font-size: 18;
 }
 
@@ -217,8 +208,7 @@ export class ${inputToUpperCase(name)}Module { }
   }
 
   js(name: string): string {
-    return `
-var frameModule = require("tns-core-modules/ui/frame");
+    return `var frameModule = require("tns-core-modules/ui/frame");
 var ${inputToUpperCase(name)}ViewModel = require("./${name}-view-model");
 
 var ${inputToUpperCase(name)}ViewModel = new ${inputToUpperCase(
@@ -237,8 +227,7 @@ exports.pageLoaded = pageLoaded;
   }
 
   viewModelJs(name: string): string {
-    return `
-var observableModule = require("tns-core-modules/data/observable");
+    return `var observableModule = require("tns-core-modules/data/observable");
 function ${inputToUpperCase(name)}ViewModel() {
   var viewModel = observableModule.fromObject({
 

@@ -13,11 +13,11 @@ export function activate(context: vscode.ExtensionContext) {
     'Congratulations, your extension "nativescript-extend" is now active!'
   );
 
-  new Emulator(context);
-  new contextMenu(context);
   new xsd(context);
   new snippet(context);
   xml(context)
+  new Emulator(context);
+  new contextMenu(context);
   // new validation(context)
 }
 

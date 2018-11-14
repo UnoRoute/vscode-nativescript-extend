@@ -16,14 +16,11 @@ This extension comes with snippets, emulator executor, context menu for Nativesc
 
 # Changes
 
-## [1.11.7] - 2018-11-7
+## [1.11.14] - 2018-11-14
 
-- Nativescript intellisense is now available.
-- Fixed xml setup config.
+- Fixed red swirling at the end of page element.
 - Updated the nativescript schema
-- Fixed xml validation error on root node.
-- Fix Nativescript extend emulator tab order
-
+- Fix Nativescript extend emulator 
 
 
 # Features

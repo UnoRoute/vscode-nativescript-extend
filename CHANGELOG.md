@@ -10,6 +10,22 @@
 - Navivescript Preview (coming soon)
 - Nativescript intellisense (coming soon)
 
+## [1.11.14] - 2018-11-14
+
+- Fixed red swirling at the end of page element.
+- Updated the nativescript schema
+- Fix Nativescript extend emulator 
+
+
+## [1.11.7] - 2018-11-7
+
+- Nativescript intellisense is now available.
+- Fixed xml setup config.
+- Updated the nativescript schema
+- Fixed xml validation error on root node.
+- Fix Nativescript extend emulator tab order
+
+
 ## [1.10.29] - 2018-10-29
 
 - Nativescript intellisense is now available.
