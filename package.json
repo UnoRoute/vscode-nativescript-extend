@@ -34,7 +34,8 @@
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [{
+        "commands": [
+            {
                 "command": "nativescriptExtend.snippets",
                 "title": "Enable/Disable Snippets",
                 "category": "Nativescript-Extend"
@@ -76,7 +77,8 @@
             }
         ],
         "menus": {
-            "explorer/context": [{
+            "explorer/context": [
+                {
                     "when": "",
                     "command": "nativescriptExtend.addJSPage",
                     "group": "Add Files"
@@ -98,7 +100,8 @@
                 }
             ]
         },
-        "snippets": [{
+        "snippets": [
+            {
                 "language": "vue",
                 "path": "./snippets/xml.json"
             },
@@ -115,9 +118,11 @@
                 "path": "./snippets/xml.json"
             }
         ],
-        "typescriptServerPlugins": [{
-            "name": "typescript-styled-plugin"
-        }],
+        "typescriptServerPlugins": [
+            {
+                "name": "typescript-styled-plugin"
+            }
+        ],
         "configuration": {
             "title": "Nativescript Extend Configuration",
             "properties": {
@@ -257,10 +262,10 @@
         "vscode": "1.1.22"
     },
     "devDependencies": {
-        "gulp": "^3.9.1",
         "expand-home-dir": "^0.0.3",
         "find-java-home": "0.2.0",
         "glob": "^7.1.3",
+        "gulp": "^4.0.0",
         "path-exists": "^3.0.0",
         "vscode-languageclient": "~5.1.1"
     }
