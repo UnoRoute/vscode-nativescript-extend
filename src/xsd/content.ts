@@ -1,4 +1,4 @@
-export var content =`<?xml version="1.0"?>
+export var content = `<?xml version="1.0"?>
 <!--SCHEMA VERSION: 2.0.0-->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <!-- ActionBar sections -->
@@ -441,7 +441,7 @@ export var content =`<?xml version="1.0"?>
     <xs:complexType name="Page">
         <xs:complexContent>
             <xs:extension base="View">
-                <xs:sequence maxOccurs="1" minOccurs="1">
+                <xs:sequence maxOccurs="2" minOccurs="1">
                     <xs:any maxOccurs="2" />
                 </xs:sequence>
                 <xs:attributeGroup ref="pageAttributes" />
@@ -913,7 +913,7 @@ export var content =`<?xml version="1.0"?>
         <xs:union memberTypes="BindingValidator">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
-                   <!-- <xs:pattern value="#ddd(ddd)?" />
+                    <!-- <xs:pattern value="#ddd(ddd)?" />
                     <xs:enumeration value="transparent" />
                     <xs:enumeration value="aliceBlue" />
                     <xs:enumeration value="antiqueWhite" />
@@ -1084,4 +1084,4 @@ export var content =`<?xml version="1.0"?>
         </xs:choice>
     </xs:group>
 </xs:schema>
-`
+`;
