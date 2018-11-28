@@ -1,33 +1,11 @@
-// Place your settings in this file to overwrite default and user settings.
 {
-    "files.exclude": {
-        // "schema": true
-    },
-    "search.exclude": {
-        "out": true // set this to false to include "out" folder in search results
-    },
-    // Turn off tsc task auto detection since we have the necessary tasks as npm scripts
-    "typescript.tsc.autoDetect": "on",
-    // "xml.fileAssociations": [
-
-    //     {
-    //         "systemId": "http://schemas.nativescript.org/tns.xsd",
-    //         "pattern": "tns.xsd"
-    //     },
-    //     {
-    //         "systemId": "D:\\USER\\Projects\\vscode%20plugins\\vscode-nativescript-extend\\tns.xsd",
-    //         "pattern": "**/*.xml"
-    //     },
-    // ],
-
-    "xml.fileAssociations": [{
-            "systemId": "http://schemas.nativescript.org/tns.xsd",
-            "pattern": "schema/tns.xsd"
-        },
+    "nativescript-extend.fileAssociations": [
         {
             "systemId": "d:\\USER\\Projects\\vscode%20plugins\\vscode-nativescript-extend\\schema\\tns.xsd",
             "pattern": "**/**/*.xml"
         }
     ],
-    "editor.snippetSuggestions": "top"
+    "files.exclude": {
+        "schema": true
+    }
 }
