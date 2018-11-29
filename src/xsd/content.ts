@@ -1,6 +1,6 @@
 export var content = `<?xml version="1.0"?>
 <!--SCHEMA VERSION: 2.0.0-->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
     <!-- ActionBar sections -->
     <xs:attributeGroup name="actionBarAttributes">
         <xs:attribute name="title" type="StringValidator" />
@@ -755,7 +755,7 @@ export var content = `<?xml version="1.0"?>
     <!--    Validator section-->
     <xs:simpleType name="BindingValidator">
         <xs:restriction base="xs:string">
-            <xs:pattern value="\{\{.*\}\}" />
+            <xs:pattern value="\\{\\{.*\\}\\}" />
             <xs:whiteSpace value="collapse" />
         </xs:restriction>
     </xs:simpleType>

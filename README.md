@@ -15,10 +15,11 @@ This extension comes with snippets, emulator executor, context menu for Nativesc
 
 # Changes
 
-## [1.11.28] - 2018-11-28
+## [1.11.29] - 2018-11-29
 
 - Removed unused npm module from extension
 - Fixed nativescript schema
+- Fixed event stream vulnerability due to a bad npm module
 
 # Features
 

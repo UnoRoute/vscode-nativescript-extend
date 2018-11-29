@@ -3,19 +3,17 @@
 <!-- ## [Unreleased]
 - Initial release -->
 
-## [Unreleased]
+## [1.11.29] - 2018-11-29
 
-- Nativescript language server (coming soon)
-- Nativescript editor (coming soon)
-- Navivescript Preview (coming soon)
-- Nativescript intellisense (coming soon)
+- Removed unused npm module from extension
+- Fixed nativescript schema
+- Fixed event stream vulnerability due to a bad npm module
 
 ## [1.11.14] - 2018-11-14
 
 - Fixed red swirling at the end of page element.
 - Updated the nativescript schema
-- Fix Nativescript extend emulator 
-
+- Fix Nativescript extend emulator
 
 ## [1.11.7] - 2018-11-7
 
@@ -24,7 +22,6 @@
 - Updated the nativescript schema
 - Fixed xml validation error on root node.
 - Fix Nativescript extend emulator tab order
-
 
 ## [1.10.29] - 2018-10-29
 

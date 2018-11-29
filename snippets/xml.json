@@ -283,7 +283,7 @@
     "{NS} Page": {
         "prefix": "NSpage",
         "body": [
-            "<Page xmlNS=\"http://www.nativescript.org/tNS.xsd\" loaded=\"onLoaded\" navigatedTo=\"onNavigatedTo\">",
+            "<Page loaded=\"onLoaded\" navigatedTo=\"onNavigatedTo\">",
             "    ",
             "</Page>"
         ]
