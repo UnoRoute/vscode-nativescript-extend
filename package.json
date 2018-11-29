@@ -2,7 +2,7 @@
     "name": "nativescript-extend",
     "displayName": "Nativescript Extend",
     "description": "Nativescript extend tool pack, helps Nativescript developers create cross-platform mobiles easliy with the support of snippets, a xml validator and a run emulator from VSCode",
-    "version": "1.11.28",
+    "version": "1.11.29",
     "icon": "image/icon.png",
     "publisher": "Paul-Ehigie-Paul",
     "repository": {
@@ -34,8 +34,7 @@
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [
-            {
+        "commands": [{
                 "command": "nativescriptExtend.snippets",
                 "title": "Enable/Disable Snippets",
                 "category": "Nativescript-Extend"
@@ -77,8 +76,7 @@
             }
         ],
         "menus": {
-            "explorer/context": [
-                {
+            "explorer/context": [{
                     "when": "",
                     "command": "nativescriptExtend.addJSPage",
                     "group": "Add Files"
@@ -100,8 +98,7 @@
                 }
             ]
         },
-        "snippets": [
-            {
+        "snippets": [{
                 "language": "vue",
                 "path": "./snippets/xml.json"
             },
@@ -118,11 +115,9 @@
                 "path": "./snippets/xml.json"
             }
         ],
-        "typescriptServerPlugins": [
-            {
-                "name": "typescript-styled-plugin"
-            }
-        ],
+        "typescriptServerPlugins": [{
+            "name": "typescript-styled-plugin"
+        }],
         "configuration": {
             "title": "Nativescript Extend Configuration",
             "properties": {
