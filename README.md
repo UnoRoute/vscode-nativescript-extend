@@ -1,7 +1,7 @@
 <div align="center">
 <h1>NativeScript Extend for Visual Studio Code</h1>
 
-[![vscode](https://img.shields.io/badge/vscode-v1.28+-373277.svg?style=for-the-badge)](https://code.visualstudio.com/updates/v1_28) [![made in nigeria](https://img.shields.io/badge/made%20in-nigeria-008751.svg?style=for-the-badge)](https://github.com/acekyd/made-in-nigeria) [![Marketplace Version](https://vsmarketplacebadge.apphb.com/version/paul-ehigie-paul.NE.svg?style=for-the-badge "Current Release")](https://marketplace.visualstudio.com/items?itemName=paul-ehigie-paul.NE)
+[![vscode](https://img.shields.io/badge/vscode-v1.28+-373277.svg?style=for-the-badge)](https://code.visualstudio.com/updates/v1_28) [![made in nigeria](https://img.shields.io/badge/made%20in-nigeria-008751.svg?style=for-the-badge)](https://github.com/acekyd/made-in-nigeria) [![Marketplace Version](https://vsmarketplacebadge.apphb.com/version/paul-ehigie-paul.NE.svg?style=for-the-badge "Current Release")](https://marketplace.visualstudio.com/items?itemName=paul-ehigie-paul.nativescript-extend)
 
 </div>
 Nativescript Extend pack contains snippets for all NativeScript UI core components , basic attributes and their descriptions, emulator runner, context menu and a xml intellisence and validator. With all this listed you now have a perfect extention that will help you on your Nativescript projects This extension will only be available on Nativescript projects.
@@ -15,7 +15,7 @@ This extension comes with snippets, emulator executor, context menu for Nativesc
 
 # Changes
 
-## [1.12.16] - 2018-12-16
+## [1.12.17] - 2018-12-17
 
 - Fixed issue of extension not running properly
 - Performance of extension increased by around 25%

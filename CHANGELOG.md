@@ -3,7 +3,7 @@
 <!-- ## [Unreleased]
 - Initial release -->
 
-## [1.12.16] - 2018-12-16
+## [1.12.17] - 2018-12-17
 
 - Fixed issue of extension not running properly
 - Performance of extension increased by around 25%
