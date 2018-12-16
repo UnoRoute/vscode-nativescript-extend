@@ -20,6 +20,7 @@
             "request": "launch",
             "runtimeExecutable": "${execPath}",
             "args": [
+          
                 "--extensionDevelopmentPath=${workspaceFolder}"
             ],
             "outFiles": [

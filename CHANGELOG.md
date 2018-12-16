@@ -3,6 +3,11 @@
 <!-- ## [Unreleased]
 - Initial release -->
 
+## [1.12.16] - 2018-12-16
+
+- Fixed issue of extension not running properly
+- Performance of extension increased by around 25%
+
 ## [1.11.29] - 2018-11-29
 
 - Removed unused npm module from extension

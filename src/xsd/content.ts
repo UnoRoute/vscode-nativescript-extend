@@ -441,8 +441,8 @@ export var content = `<?xml version="1.0"?>
     <xs:complexType name="Page">
         <xs:complexContent>
             <xs:extension base="View">
-                <xs:sequence maxOccurs="2" minOccurs="1">
-                    <xs:any maxOccurs="2" />
+                <xs:sequence>
+                    <xs:any maxOccurs="2" processContents="skip" />
                 </xs:sequence>
                 <xs:attributeGroup ref="pageAttributes" />
             </xs:extension>
@@ -755,7 +755,7 @@ export var content = `<?xml version="1.0"?>
     <!--    Validator section-->
     <xs:simpleType name="BindingValidator">
         <xs:restriction base="xs:string">
-            <xs:pattern value="\\{\\{.*\\}\\}" />
+            <xs:pattern value="\\{\\{.*\\}\\}"/>
             <xs:whiteSpace value="collapse" />
         </xs:restriction>
     </xs:simpleType>

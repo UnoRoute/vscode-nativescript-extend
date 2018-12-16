@@ -10,16 +10,17 @@ export class snippet {
     this.bar.show();
     this.snippetStatusBar(this.getSnippetVal());
     this.context.subscriptions.push(
-      vscode.commands.registerCommand("nativescript-extend.snippets", arg => {
+      vscode.commands.registerCommand("NE.snippets", arg => {
         this.switchSnippets(!this.getSnippetVal());
         this.snippetStatusBar(!this.getSnippetVal());
       })
     );
-  }
+    console.log("snippet working")
+   }
 
   getSnippetVal(): boolean {
     var val: boolean = vscode.workspace
-      .getConfiguration("nativescript-extend")
+      .getConfiguration("NE")
       .get("enable.snippets");
     return val;
   }
@@ -35,12 +36,12 @@ export class snippet {
         .update("snippetSuggestions", "none", false);
     }
     vscode.workspace
-      .getConfiguration("nativescript-extend")
+      .getConfiguration("NE")
       .update("enable.snippets", val, false);
   }
 
   snippetStatusBar(val) {
-    this.bar.command = "nativescript-extend.snippets";
+    this.bar.command = "NE.snippets";
     this.bar.text = val ? "Snippets On" : "Snippets Off";
   }
 }
