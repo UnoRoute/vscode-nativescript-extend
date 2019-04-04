@@ -71,7 +71,7 @@ export class platformRun extends emulatorPref implements IEmulator {
     switch (platform) {
       case 'android':
         //@ts-ignore
-        var stdout = await util.runCmd(`${join(this.emulatorPath, '')} -list-avds`);
+        var stdout = await util.runCmd(`"${join(this.emulatorPath)}" -list-avds`);
         //@ts-ignore
         this.emulatorVersion = stdout.stdout.trim().split('\n')
         this.pickVersion('android')

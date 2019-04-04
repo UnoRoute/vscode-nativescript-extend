@@ -28,7 +28,7 @@
     "XML Validation"
   ],
   "activationEvents": [
-    "workspaceContains:**/nativescript*"
+    "workspaceContains:*/nativescript*"
   ],
   "extensionPack": [
     "redhat.vscode-xml"
