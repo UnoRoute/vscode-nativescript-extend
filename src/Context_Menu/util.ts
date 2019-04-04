@@ -22,8 +22,8 @@ export class util {
     vue?: boolean
   ): void {
     var d = path.parse(file).name.match(/-\w+|\.\w+/g)
-      ? path.parse(file).name.replace(/-\w+|\.\w+/g, "") + " Page"
-      : path.parse(file).name + " Page";
+      ? path.parse(file).name.replace(/-\w+|\.\w+/g, "") 
+      : path.parse(file).name;
     if (vue) {
       d = "";
     }

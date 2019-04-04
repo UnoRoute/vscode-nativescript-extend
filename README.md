@@ -1,39 +1,43 @@
 <div align="center">
 <h1>NativeScript Extend for Visual Studio Code</h1>
 
-[![vscode](https://img.shields.io/badge/vscode-v1.28+-373277.svg?style=for-the-badge)](https://code.visualstudio.com/updates/v1_28) [![made in nigeria](https://img.shields.io/badge/made%20in-nigeria-008751.svg?style=for-the-badge)](https://github.com/acekyd/made-in-nigeria) [![Marketplace Version](https://vsmarketplacebadge.apphb.com/version/paul-ehigie-paul.NE.svg?style=for-the-badge "Current Release")](https://marketplace.visualstudio.com/items?itemName=paul-ehigie-paul.nativescript-extend)
+[![vscode](https://img.shields.io/badge/vscode-v1.28+-373277.svg?style=for-the-badge)](https://code.visualstudio.com/updates/v1_28)[![made in nigeria](https://img.shields.io/badge/made%20in-nigeria-008751.svg?style=for-the-badge)](https://github.com/ehigiepaul/vscode-nativescript-extend)[![Marketplace Version](https://vsmarketplacebadge.apphb.com/version/paul-ehigie-paul.nativescript-extend.svg?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=paul-ehigie-paul.nativescript-extend)
 
 </div>
-Nativescript Extend pack contains snippets for all NativeScript UI core components , basic attributes and their descriptions, emulator runner, context menu and a xml intellisence and validator. With all this listed you now have a perfect extention that will help you on your Nativescript projects This extension will only be available on Nativescript projects.
+Nativescript Extend packs all your needs in make your Nativescript projects fast and easy. 
 
-This extension comes with snippets, emulator executor, context menu for Nativescript project, snippet toggler and a XML widgets, attributes, parameter validator and intelisense.
+This extension will only be available on Nativescript projects.
 
-- All UI layout and widget are prefixed with `NS`. Attributes do not have a prefix.
-- You can toggle the snippets off and on, if you and to use the xml intellisense.
+This extension comes with snippets, emulator executor, context menu for Nativescript project, snippet toggler and a XML widgets, attributes, parameter validator and intelisense. With all this listed you now have a perfect extention that will help you on your Nativescript projects.
+
+- All UI layout and widget are prefixed with `NS`. Attributes do not have any prefix.
+- You can toggle the snippets off and on, if you want to use the xml intellisense.
 
 > _Please note: To get the best out of this extension you wil have to disable or uninstall any nativescript snippets extension._
 
+> Please if anyone has any feature or fix on this extension, please kindly make a request on our [Github](https://github.com/ehigiepaul/vscode-nativescript-extend/issues) repository.
+
 # Changes
 
-## [1.12.17] - 2018-12-17
+## [2.4.4] - 2019-4-4
 
-- Fixed issue of extension not running properly
-- Performance of extension increased by around 25%
+- Fixed Extensions running on every none nativescript projects.
+- Fixed a request #2 made by @shiv19 to remove "Page" string when creating folders.
 
 # Features
 
 - ### Nativescript intellisense and XML validation.
-  ![intellisense](https://github.com/ehigiepaul/vscode-NE/raw/master/image/intellisense.gif)
+  ![intellisense](https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/intellisense.gif)
 - ### Emulator
-  ![emulator](https://github.com/ehigiepaul/vscode-NE/raw/master/image/emulator.gif)
+  ![emulator](https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/emulator.gif)
 - ### Emulator auto setup
-  ![emulator auto setup](https://github.com/ehigiepaul/vscode-NE/raw/master/image/auto%20setup.gif)
+  ![emulator auto setup](https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/auto%20setup.gif)
 - ### Snippets
-  ![snippets](https://github.com/ehigiepaul/vscode-NE/raw/master/image/snippets.gif)
+  ![snippets](https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/snippets.gif)
 - ### Snippets toggler
-  ![snippets](https://github.com/ehigiepaul/vscode-NE/raw/master/image/toggle%20snippets.gif)
+  ![snippets](https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/toggle%20snippets.gif)
 - ### Explorer Context Menu Page Creation,
-  ![Context Menu](https://github.com/ehigiepaul/vscode-NE/raw/master/image/cm.gif)
+  ![Context Menu](https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/cm.gif)
 
 # Snippets Components keys
 

@@ -3,6 +3,12 @@
 <!-- ## [Unreleased]
 - Initial release -->
 
+## [2.4.4] - 2019-4-4
+
+- Fixed Extensions running on every none nativescript projects.
+- Fixed a request #2 made by @shiv19 to remove "Page" string when creating folders.
+
+
 ## [1.12.17] - 2018-12-17
 
 - Fixed issue of extension not running properly
