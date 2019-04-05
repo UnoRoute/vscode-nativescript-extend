@@ -63,7 +63,7 @@ export class platformRun extends emulatorPref implements IEmulator {
   async runVersion(version: string) {
     vscode.window.showInformationMessage('Booting Nativescript Extend  Emulator ....')
     //@ts-ignore
-    var stdout = await util.runCmd(`${join(this.emulatorPath)} @${version}`)
+    var stdout = await util.runCmd(`"${join(this.emulatorPath)}" @${version}`)
     this.showStatuBar()
   }
 
