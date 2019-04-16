@@ -28,7 +28,7 @@
     "XML Validation"
   ],
   "activationEvents": [
-    "workspaceContains:*/nativescript*"
+    "workspaceContains:**/nativescript*"
   ],
   "extensionPack": [
     "redhat.vscode-xml"
@@ -39,42 +39,42 @@
       {
         "command": "NE.snippets",
         "title": "Enable/Disable Snippets",
-        "category": "NE"
+        "category": "Natviescript-Extend"
       },
       {
         "command": "NE.launchEmulator",
         "title": "Launch Emulator",
-        "category": "NE"
+        "category": "Natviescript-Extend"
       },
       {
         "command": "NE.setupEmulator",
         "title": "Setup Emulator",
-        "category": "NE"
+        "category": "Natviescript-Extend"
       },
       {
         "command": "NE.addXmlValidator",
         "title": "Add Nativescript XML Validator",
-        "category": "NE"
+        "category": "Natviescript-Extend"
       },
       {
         "command": "NE.addJSPage",
         "title": "Add NativeScript JS Page",
-        "category": "NE"
+        "category": "Natviescript-Extend"
       },
       {
         "command": "NE.addTsPage",
         "title": "Add NativeScript TS Page",
-        "category": "NE"
+        "category": "Natviescript-Extend"
       },
       {
         "command": "NE.addNGPage",
         "title": "Add NativeScript NG Page",
-        "category": "NE"
+        "category": "Natviescript-Extend"
       },
       {
         "command": "NE.addVuePage",
         "title": "Add NativeScript VUE Pages",
-        "category": "NE"
+        "category": "Natviescript-Extend"
       }
     ],
     "menus": {
@@ -108,6 +108,10 @@
       },
       {
         "language": "html",
+        "path": "./snippets/xml.json"
+      },
+      {
+        "language": "vue",
         "path": "./snippets/xml.json"
       }
     ],

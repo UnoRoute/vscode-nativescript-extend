@@ -246,12 +246,12 @@ module.exports = ${inputToUpperCase(name)}ViewModel;
   public constructor() {}
 }
 
-function inputToUpperCase(inputName) {
+function inputToUpperCase(inputName:string) {
   var inputUpperCase;
   inputUpperCase = inputName.charAt(0).toUpperCase() + inputName.slice(1);
   return camelCase(inputUpperCase);
 }
-function camelCase(input) {
+function camelCase(input:string) {
   return input.replace(/-([a-z])/gi, function(all, letter) {
     return letter.toUpperCase();
   });

@@ -14,6 +14,7 @@ export class xsd {
     this.main();
     this.checkValidation();
     // this.updateXsd();
+    console.log(join(__dirname))
     console.log(vscode.workspace.rootPath);
     console.log('xsd works')
   }
@@ -24,7 +25,7 @@ export class xsd {
   main(): void {
     this.context.subscriptions.push(
       vscode.commands.registerCommand(
-        "xml.addXmlValidator",
+        "NE.addXmlValidator",
         () => {
           this.copyXsd();
           this.setConfig();

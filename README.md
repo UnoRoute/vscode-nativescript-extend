@@ -10,7 +10,7 @@ This extension will only be available on Nativescript projects.
 
 This extension comes with snippets, emulator executor, context menu for Nativescript project, snippet toggler and a XML widgets, attributes, parameter validator and intelisense. With all this listed you now have a perfect extention that will help you on your Nativescript projects.
 
-- All UI layout and widget are prefixed with `NS`. Attributes do not have any prefix.
+- All UI layout and widget are prefixed with `NS`. Attributes do not have or need any prefix.
 - You can toggle the snippets off and on, if you want to use the xml intellisense.
 
 > _Please note: To get the best out of this extension you wil have to disable or uninstall any nativescript snippets extension._
@@ -142,14 +142,14 @@ This extension comes with snippets, emulator executor, context menu for Nativesc
 
 # How to use Nativescript Extend
 
-- Install Nativescript Extend from VScode marketplace
-- Active the extension
-- Create/run a Nativescript project
-- Nativescript detects a NS project and auto enable the emulator and ask to add xml validation for the project
-- Right click on the explorer panel area and create your prefered project framework
-- Open a xml/html/vue file and get Nativescript Extend snippet
-- type NS for widget and layouts
-- type your prefered attributes. Attributes dont need any prefix
+- Install Nativescript Extend from VScode marketplace.
+- Active the extension.
+- Create/run a Nativescript project.
+- Nativescript detects a NS project and auto enable the emulator and ask to add xml validation for the project.
+- Right click on the explorer panel area and create your prefered project framework page.
+- Open a xml/html/vue file and get Nativescript Extend snippet on by defualt.
+- Type NS prefix for widget and layouts snippets.
+- Type your prefered attributes. Attributes dont need any prefix.
 
 # MIT License
 
