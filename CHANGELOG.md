@@ -3,6 +3,10 @@
 <!-- ## [Unreleased]
 - Initial release -->
 
+## [2.5.0] - 2019-5-3
+
+- Enabled snippets for vue projects
+  
 ## [2.4.4] - 2019-4-4
 
 - Fixed Extensions running on every none nativescript projects.
