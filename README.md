@@ -19,10 +19,9 @@ This extension comes with snippets, emulator executor, context menu for Nativesc
 
 # Changes
 
-## [2.4.4] - 2019-4-4
+## [2.4.4] - 2019-5-3
 
-- Fixed Extensions running on every none nativescript projects.
-- Fixed a request #2 made by @shiv19 to remove "Page" string when creating folders.
+- Enabled snippets for vue projects
 
 # Features
 
