@@ -14,9 +14,9 @@ export class xsd {
     this.main();
     this.checkValidation();
     // this.updateXsd();
-    console.log(join(__dirname))
-    console.log(vscode.workspace.rootPath);
-    console.log('xsd works')
+    // console.log(join(__dirname))
+    // console.log(vscode.workspace.rootPath);
+    // console.log('xsd works')
   }
 
   /**

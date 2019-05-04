@@ -15,7 +15,7 @@ export class snippet {
         this.snippetStatusBar(!this.getSnippetVal());
       })
     );
-    console.log("snippet working")
+    // console.log("snippet working")
    }
 
   getSnippetVal(): boolean {

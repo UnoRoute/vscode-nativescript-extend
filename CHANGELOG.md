@@ -3,6 +3,9 @@
 <!-- ## [Unreleased]
 - Initial release -->
 
+## [2.5.1] - 2019-5-4
+- Fixed issue with detect nativescript project.
+  
 ## [2.5.0] - 2019-5-3
 
 - Enabled snippets for vue projects

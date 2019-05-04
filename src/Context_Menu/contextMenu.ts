@@ -11,7 +11,7 @@ export class contextMenu extends createPage implements IContext {
   constructor(private ctx: vscode.ExtensionContext) {
     super();
     this.main();
-    console.log('content menu working')
+    // console.log('content menu working')
   }
 
   /**

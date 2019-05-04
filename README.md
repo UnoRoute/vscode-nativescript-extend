@@ -19,9 +19,9 @@ This extension comes with snippets, emulator executor, context menu for Nativesc
 
 # Changes
 
-## [2.4.4] - 2019-5-3
+## [2.5.1] - 2019-5-4
 
-- Enabled snippets for vue projects
+- Fixed issue with detect nativescript project.
 
 # Features
 
