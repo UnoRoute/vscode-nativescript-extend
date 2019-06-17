@@ -19,9 +19,8 @@ This extension comes with snippets, emulator executor, context menu for Nativesc
 
 # Changes
 
-## [2.5.1] - 2019-5-4
-
-- Fixed issue with detect nativescript project.
+## [2.6.0] - 2019-6-17
+- Security update
 
 # Features
 
