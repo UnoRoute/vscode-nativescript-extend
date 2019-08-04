@@ -3,7 +3,7 @@
 <!-- ## [Unreleased]
 - Initial release -->
 
-## [2.6.1] - 2019-6-17
+## [2.6.2] - 2019-8-04
 - Security update
   
 ## [2.5.1] - 2019-5-4
