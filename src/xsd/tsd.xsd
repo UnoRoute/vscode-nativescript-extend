@@ -533,7 +533,7 @@
   <xs:element name="repeater" type="Repeater" />
   <!-- Scroll View Section -->
   <xs:attributeGroup name="scrollViewAttributes">
-    <xs:attribute name="scroll" type="StringValidator" />
+    <xs:attribute name="scroll" type="OrientationValidator" />
     <xs:attribute name="verticalOffset" type="NumberValidator" />
     <xs:attribute name="horizontalOffset" type="NumberValidator" />
     <xs:attribute name="scrollableHeight" type="NumberValidator" />
