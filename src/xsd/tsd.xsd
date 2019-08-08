@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!--SCHEMA VERSION: 2.0.0-->
-<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <!-- ActionBar sections -->
   <xs:attributeGroup name="actionBarAttributes">
     <xs:attribute name="title" type="StringValidator" />
@@ -19,7 +19,7 @@
                 <xs:element name="ActionItem" type="ActionItem" maxOccurs="unbounded" />
               </xs:sequence>
             </xs:complexType>
-          </xs:element>                                                                             
+          </xs:element>
         </xs:choice>
         <xs:attributeGroup ref="actionBarAttributes" />
       </xs:extension>
@@ -282,7 +282,7 @@
   <xs:element name="label" type="Label" />
   <!-- AbsoluteLayout Section -->
   <xs:attributeGroup name="absoluteLayoutAttributes" />
-    <xs:complexType name="AbsoluteLayout">
+  <xs:complexType name="AbsoluteLayout">
     <xs:complexContent>
       <xs:extension base="LayoutBase">
         <xs:attributeGroup ref="absoluteLayoutAttributes" />
@@ -447,7 +447,7 @@
     <xs:complexContent>
       <xs:extension base="View">
         <xs:sequence>
-          <xs:any maxOccurs="2" processContents="lax" />
+          <xs:any maxOccurs="2" processContents="skip" />
         </xs:sequence>
         <xs:attributeGroup ref="pageAttributes" />
       </xs:extension>
@@ -1079,7 +1079,7 @@
         </xs:restriction>
       </xs:simpleType>
     </xs:union>
-  </xs:simpleType>   
+  </xs:simpleType>
   <xs:simpleType name="DockValidator">
     <xs:union memberTypes="BindingValidator">
       <xs:simpleType>
