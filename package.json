@@ -31,72 +31,73 @@
     "*"
   ],
   "extensionPack": [
-    "redhat.vscode-xml"
+    "redhat.vscode-xml",
+    "octref.vetur"
   ],
   "main": "./out/extension",
   "contributes": {
     "commands": [
       {
-        "command": "NE.snippets",
+        "command": "NativescriptExtend.snippets",
         "title": "Enable/Disable Snippets",
-        "category": "Natviescript-Extend"
+        "category": "Nativescript-Extend"
       },
       {
-        "command": "NE.launchEmulator",
+        "command": "NativescriptExtend.launchEmulator",
         "title": "Launch Emulator",
-        "category": "Natviescript-Extend"
+        "category": "Nativescript-Extend"
       },
       {
-        "command": "NE.setupEmulator",
+        "command": "NativescriptExtend.setupEmulator",
         "title": "Setup Emulator",
-        "category": "Natviescript-Extend"
+        "category": "Nativescript-Extend"
       },
       {
-        "command": "NE.addXmlValidator",
+        "command": "NativescriptExtend.addXmlValidator",
         "title": "Add Nativescript XML Validator",
-        "category": "Natviescript-Extend"
+        "category": "Nativescript-Extend"
       },
       {
-        "command": "NE.addJSPage",
+        "command": "NativescriptExtend.addJSPage",
         "title": "Add NativeScript JS Page",
-        "category": "Natviescript-Extend"
+        "category": "Nativescript-Extend"
       },
       {
-        "command": "NE.addTsPage",
+        "command": "NativescriptExtend.addTsPage",
         "title": "Add NativeScript TS Page",
-        "category": "Natviescript-Extend"
+        "category": "Nativescript-Extend"
       },
       {
-        "command": "NE.addNGPage",
+        "command": "NativescriptExtend.addNGPage",
         "title": "Add NativeScript NG Page",
-        "category": "Natviescript-Extend"
+        "category": "Nativescript-Extend"
       },
       {
-        "command": "NE.addVuePage",
+        "command": "NativescriptExtend.addVuePage",
         "title": "Add NativeScript VUE Pages",
-        "category": "Natviescript-Extend"
+        "category": "Nativescript-Extend"
       }
     ],
     "menus": {
       "explorer/context": [
         {
           "when": "",
-          "command": "NE.addJSPage",
+          "command": "NativescriptExtend.addJSPage",
           "group": "Add Files"
         },
         {
           "when": "",
-          "command": "NE.addTsPage",
+          "command": "NativescriptExtend.addTsPage",
           "group": "Add Files"
         },
         {
           "when": "",
-          "command": "NE.addNGPage",
+          "command": "NativescriptExtend.addNGPage",
           "group": "Add Files"
         },
         {
           "when": "",
-          "command": "NE.addVuePage",
+          "command": "NativescriptExtend.addVuePage",
           "group": "Add Files"
         }
       ]
@@ -122,19 +123,19 @@
     "configuration": {
       "title": "Nativescript Extend Configuration",
       "properties": {
-        "NE.emulatorPath": {
+        "NativescriptExtend.emulatorPath": {
           "type": "string",
           "default": "",
           "description": "The absolute path of the Android emulator script.",
           "scope": "application"
         },
-        "NE.enable.snippets": {
+        "NativescriptExtend.enable.snippets": {
           "type": "boolean",
           "default": true,
           "description": "The will enable snippet for the xml, vue and html files",
           "scope": "window"
         },
-        "NE.fileAssociations": {
+        "NativescriptExtend.fileAssociations": {
           "type": "array",
           "default": [],
           "items": {
@@ -165,7 +166,7 @@
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
+    "watch": "tsc -w -p ./",
     "postinstall": "node ./node_modules/vscode/bin/install"
   },
   "dependencies": {

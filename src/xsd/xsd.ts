@@ -25,7 +25,7 @@ export class xsd {
   main(): void {
     this.context.subscriptions.push(
       vscode.commands.registerCommand(
-        "NE.addXmlValidator",
+        "NativescriptExtend.addXmlValidator",
         () => {
           this.copyXsd();
           this.setConfig();
@@ -79,8 +79,6 @@ export class xsd {
       /(\s+)/g,
       "%20"
     );
- 
-
 
     vscode.workspace.getConfiguration("xml").update(
       "fileAssociations",
@@ -88,6 +86,10 @@ export class xsd {
         {
           systemId: schema,
           pattern: "**/**/*.xml"
+        },
+        {
+          systemId: "http://www.w3.org/2001/XMLSchema.xsd",
+          pattern: schema
         }
       ],
       false
@@ -100,13 +102,33 @@ export class xsd {
       },
       false
     );
+
+    vscode.workspace.getConfiguration("xml").update(
+      "completion.autoCloseTags",
+      true,
+      false
+    );
+
+    vscode.workspace.getConfiguration("xml").update(
+      "format.enabled",
+      true,
+      false
+    );
+
+
+    vscode.workspace.getConfiguration("xml").update(
+      "validation.enabled",
+      true,
+      false
+    );
   }
+
   /**
    * Create a tns.xsd schema on the user workspace
    */
   copyXsd(): void {
-   mkdirSync(join(vscode.workspace.rootPath, "schema"))
-    
+    mkdirSync(join(vscode.workspace.rootPath, "schema"))
+
     writeFile(
       join(vscode.workspace.rootPath, "schema", "tns.xsd"),
       content,

@@ -9,7 +9,7 @@ import { join } from "path";
  */
 export class platformRun extends emulatorPref implements IEmulator {
   statusBar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 0)
-  emulatorPath = vscode.workspace.getConfiguration('NE').get('emulatorPath')
+  emulatorPath = vscode.workspace.getConfiguration('NativescriptExtend').get('emulatorPath')
   emulatorVersion: string[]
   /**
    *
@@ -27,7 +27,7 @@ export class platformRun extends emulatorPref implements IEmulator {
     this.statusBar.tooltip = 'Nativescript Extend Run Emulator'
     command == "" ?
       this.statusBar.command = null :
-      this.statusBar.command = 'NE.launchEmulator'
+      this.statusBar.command = 'NativescriptExtend.launchEmulator'
     this.statusBar.show()
     // TODO implement here
   }

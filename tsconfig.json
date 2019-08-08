@@ -1,14 +1,18 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "target": "es6",
+        "target": "es5",
         "outDir": "out",
         "lib": [
             "es6"
         ],
-        "sourceMap": true,
-        "rootDir": "src",
+        "importHelpers": true,
+        "forceConsistentCasingInFileNames": true,
+        "removeComments": true,
+        // "rootDir": "src",
         "allowSyntheticDefaultImports": true,
+        "inlineSources": true,
+        "inlineSourceMap": true
         /* Strict Type-Checking Option */
         // "strict": true,
         /* enable all strict type-checking options */

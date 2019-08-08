@@ -11,8 +11,9 @@ import { tracking } from "./tracking/tracking";
 export function activate(context: vscode.ExtensionContext) {
 
 
-  //  console.log(join(vscode.workspace.rootPath,"package.json"))
-  var file = join(vscode.workspace.rootPath, "package.json")
+   console.log(vscode.workspace.workspaceFolders[0].uri.fsPath)
+  var file = join(vscode.workspace.workspaceFolders[0].uri.fsPath, "package.json")
+
 
   readFile(file, (err, data) => {
     if (err) console.log('This is not a nativescript project')
@@ -20,7 +21,7 @@ export function activate(context: vscode.ExtensionContext) {
     var pack = JSON.parse(data.toString())
     if (pack.nativescript) {
       console.log(
-        'Congratulations, your extension "NE" is now active!'
+        'Congratulations, "Nativescript-Extend" is now active!'
       );
       //  enable extension if nativescript is found in the package.json
       new contextMenu(context);
