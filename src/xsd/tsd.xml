@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <!--SCHEMA VERSION: 2.0.0-->
-<xs:schema id="tns" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema id="tns" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <!-- ActionBar sections -->
   <xs:attributeGroup name="actionBarAttributes">
     <xs:attribute name="title" type="StringValidator" />
@@ -352,9 +353,14 @@
   <xs:attributeGroup name="flexboxLayoutAttributes">
     <xs:attribute name="alignContent" type="StringValidator" />
     <xs:attribute name="alignItems" type="StringValidator" />
+    <xs:attribute name="alignSelf" type="StringValidator" />
     <xs:attribute name="flexDirection" type="StringValidator" />
+    <xs:attribute name="flexGrow" type="NumberValidator" />
+    <xs:attribute name="flexShrink" type="NumberValidator" />
     <xs:attribute name="flexWrap" type="StringValidator" />
+    <xs:attribute name="flexWrapBefore" type="BooleanValidator" />
     <xs:attribute name="justifyContent" type="StringValidator" />
+    <xs:attribute name="order" type="NumberValidator" />
   </xs:attributeGroup>
   <xs:complexType name="FlexboxLayout">
     <xs:complexContent>
