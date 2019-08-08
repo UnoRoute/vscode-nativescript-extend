@@ -2,7 +2,11 @@
 
 <!-- ## [Unreleased]
 - Initial release -->
-
+## [2.7.1] - 2019-8-08
+- Security update
+- Command Palette Updated
+- XML schema updated
+  
 ## [2.6.2] - 2019-8-04
 - Security update
   
