@@ -19,7 +19,7 @@ This extension comes with snippets, emulator executor, context menu for Nativesc
 
 # Changes
 
-## [2.7.2] - 2019-8-09
+## [2.7.4] - 2019-8-09
 - Security update
 - Command Palette Updated
 - XML schema updated
