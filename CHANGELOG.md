@@ -2,6 +2,17 @@
 
 <!-- ## [Unreleased]
 - Initial release -->
+## [2.7.2] - 2019-8-09
+- Security update
+- Command Palette Updated
+- XML schema updated
+    - Scrollview attributes updated
+    - Tabview attributes and validation updates
+    - Docklayout attributes updated
+    - Flexboxlayout attributes updates
+    - Listview attributes updated
+  
+
 ## [2.7.1] - 2019-8-08
 - Security update
 - Command Palette Updated

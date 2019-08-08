@@ -1,7 +1,6 @@
 <?xml version="1.0" ?>
 <!--SCHEMA VERSION: 2.0.0-->
-<xs:schema id="tns" 
-  xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <!-- ActionBar sections -->
   <xs:attributeGroup name="actionBarAttributes">
     <xs:attribute name="title" type="StringValidator" />
@@ -448,7 +447,7 @@
     <xs:complexContent>
       <xs:extension base="View">
         <xs:sequence>
-          <xs:any maxOccurs="2" processContents="skip" />
+          <xs:any maxOccurs="2" processContents="lax" />
         </xs:sequence>
         <xs:attributeGroup ref="pageAttributes" />
       </xs:extension>
