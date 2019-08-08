@@ -1,6 +1,6 @@
 export var content = `<?xml version="1.0" ?>
 <!--SCHEMA VERSION: 2.0.0-->
-<xs:schema id="tns" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <!-- ActionBar sections -->
   <xs:attributeGroup name="actionBarAttributes">
     <xs:attribute name="title" type="StringValidator" />
@@ -19,7 +19,7 @@ export var content = `<?xml version="1.0" ?>
                 <xs:element name="ActionItem" type="ActionItem" maxOccurs="unbounded" />
               </xs:sequence>
             </xs:complexType>
-          </xs:element>
+          </xs:element>                                                                             
         </xs:choice>
         <xs:attributeGroup ref="actionBarAttributes" />
       </xs:extension>
@@ -164,7 +164,7 @@ export var content = `<?xml version="1.0" ?>
     <xs:attribute name="colSpan" type="NumberValidator" />
     <xs:attribute name="left" type="NumberValidator" />
     <xs:attribute name="top" type="NumberValidator" />
-    <xs:attribute name="dock" type="StringValidator" />
+    <xs:attribute name="dock" type="DockValidator" />
     <xs:attribute name="class" type="StringValidator" />
     <xs:attribute name="tap" type="StringValidator" />
     <xs:attribute name="ontap" type="StringValidator" />
@@ -282,7 +282,7 @@ export var content = `<?xml version="1.0" ?>
   <xs:element name="label" type="Label" />
   <!-- AbsoluteLayout Section -->
   <xs:attributeGroup name="absoluteLayoutAttributes" />
-  <xs:complexType name="AbsoluteLayout">
+    <xs:complexType name="AbsoluteLayout">
     <xs:complexContent>
       <xs:extension base="LayoutBase">
         <xs:attributeGroup ref="absoluteLayoutAttributes" />
@@ -352,9 +352,14 @@ export var content = `<?xml version="1.0" ?>
   <xs:attributeGroup name="flexboxLayoutAttributes">
     <xs:attribute name="alignContent" type="StringValidator" />
     <xs:attribute name="alignItems" type="StringValidator" />
+    <xs:attribute name="alignSelf" type="StringValidator" />
     <xs:attribute name="flexDirection" type="StringValidator" />
+    <xs:attribute name="flexGrow" type="NumberValidator" />
+    <xs:attribute name="flexShrink" type="NumberValidator" />
     <xs:attribute name="flexWrap" type="StringValidator" />
+    <xs:attribute name="flexWrapBefore" type="BooleanValidator" />
     <xs:attribute name="justifyContent" type="StringValidator" />
+    <xs:attribute name="order" type="NumberValidator" />
   </xs:attributeGroup>
   <xs:complexType name="FlexboxLayout">
     <xs:complexContent>
@@ -442,7 +447,7 @@ export var content = `<?xml version="1.0" ?>
     <xs:complexContent>
       <xs:extension base="View">
         <xs:sequence>
-          <xs:any maxOccurs="2" processContents="skip" />
+          <xs:any maxOccurs="2" processContents="lax" />
         </xs:sequence>
         <xs:attributeGroup ref="pageAttributes" />
       </xs:extension>
@@ -532,6 +537,7 @@ export var content = `<?xml version="1.0" ?>
     <xs:attribute name="horizontalOffset" type="NumberValidator" />
     <xs:attribute name="scrollableHeight" type="NumberValidator" />
     <xs:attribute name="scrollableWidth" type="NumberValidator" />
+    <xs:attribute name="isScrollEnabled" type="BooleanValidator" />
     <xs:attribute name="orientation" type="OrientationValidator" />
   </xs:attributeGroup>
   <xs:complexType name="ScrollView">
@@ -627,6 +633,7 @@ export var content = `<?xml version="1.0" ?>
     <xs:attribute name="tabTextColor" type="ColorValidator" />
     <xs:attribute name="tabTextFontSize" type="NumberValidator" />
     <xs:attribute name="selectedIndexChanged" type="StringValidator" />
+    <xs:attribute name="androidSelectedTabHighlightColor" type="ColorValidator" />
   </xs:attributeGroup>
   <xs:complexType name="TabView">
     <xs:complexContent>
@@ -755,7 +762,7 @@ export var content = `<?xml version="1.0" ?>
   <!--    Validator section-->
   <xs:simpleType name="BindingValidator">
     <xs:restriction base="xs:string">
-      <xs:pattern value="\w+" />
+      <xs:pattern value="\{\{.*\}\}" />
       <xs:whiteSpace value="collapse" />
     </xs:restriction>
   </xs:simpleType>
@@ -913,7 +920,7 @@ export var content = `<?xml version="1.0" ?>
     <xs:union memberTypes="BindingValidator">
       <xs:simpleType>
         <xs:restriction base="xs:string">
-          <xs:pattern value="#[a-zA-Z0-9]{3,6}" />
+          <xs:pattern value=".*" />
           <xs:enumeration value="transparent" />
           <xs:enumeration value="aliceBlue" />
           <xs:enumeration value="antiqueWhite" />
@@ -1072,6 +1079,18 @@ export var content = `<?xml version="1.0" ?>
         </xs:restriction>
       </xs:simpleType>
     </xs:union>
+  </xs:simpleType>   
+  <xs:simpleType name="DockValidator">
+    <xs:union memberTypes="BindingValidator">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="left" />
+          <xs:enumeration value="right" />
+          <xs:enumeration value="top" />
+          <xs:enumeration value="bottom" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
   </xs:simpleType>
   <xs:group name="UIComponents">
     <xs:choice>
@@ -1169,4 +1188,5 @@ export var content = `<?xml version="1.0" ?>
       <xs:element name="Flex-layout" type="FlexboxLayout" />
     </xs:choice>
   </xs:group>
-</xs:schema>`
+</xs:schema>
+`
