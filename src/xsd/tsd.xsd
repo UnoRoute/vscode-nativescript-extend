@@ -165,7 +165,7 @@
     <xs:attribute name="colSpan" type="NumberValidator" />
     <xs:attribute name="left" type="NumberValidator" />
     <xs:attribute name="top" type="NumberValidator" />
-    <xs:attribute name="dock" type="StringValidator" />
+    <xs:attribute name="dock" type="DockValidator" />
     <xs:attribute name="class" type="StringValidator" />
     <xs:attribute name="tap" type="StringValidator" />
     <xs:attribute name="ontap" type="StringValidator" />
@@ -295,7 +295,6 @@
   <!-- DockLayout Section -->
   <xs:attributeGroup name="dockLayoutAttributes">
     <xs:attribute name="stretchLastChild" type="BooleanValidator" />
-    <xs:attribute name="dock" type="DockValidator" />
   </xs:attributeGroup>
   <xs:complexType name="DockLayout">
     <xs:complexContent>
