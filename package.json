@@ -29,8 +29,8 @@
   ],
   "activationEvents": [
     "*"
-  ],
-  "extensionPack": [
+  ], 
+  "extensionDependencies": [
     "redhat.vscode-xml",
     "octref.vetur"
   ],

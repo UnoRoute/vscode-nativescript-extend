@@ -20,7 +20,7 @@
                 <xs:element name="ActionItem" type="ActionItem" maxOccurs="unbounded" />
               </xs:sequence>
             </xs:complexType>
-          </xs:element>
+          </xs:element>                                                                             
         </xs:choice>
         <xs:attributeGroup ref="actionBarAttributes" />
       </xs:extension>
@@ -633,6 +633,7 @@
     <xs:attribute name="tabTextColor" type="ColorValidator" />
     <xs:attribute name="tabTextFontSize" type="NumberValidator" />
     <xs:attribute name="selectedIndexChanged" type="StringValidator" />
+    <xs:attribute name="androidSelectedTabHighlightColor" type="ColorValidator" />
   </xs:attributeGroup>
   <xs:complexType name="TabView">
     <xs:complexContent>
