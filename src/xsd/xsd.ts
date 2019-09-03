@@ -1,7 +1,6 @@
 import * as vscode from "vscode";
 import { join } from "path";
-import { writeFile, exists, mkdirSync, unlinkSync } from "fs";
-import { content } from "./content";
+import { writeFile, exists, mkdirSync, unlinkSync, readFile, readFileSync, createWriteStream, writeFileSync, existsSync } from "fs";
 
 /**
  * @author Paul Ehigie Paul
@@ -42,6 +41,7 @@ export class xsd {
     let folder = vscode.workspace.workspaceFolders[0].uri.fsPath;
     var schema = join(vscode.workspace.rootPath, "schema", "tns.xsd");
     var config = join(vscode.workspace.rootPath, ".vscode", "settings.json");
+
     exists(schema, exists => {
       if (!exists) {
         vscode.window
@@ -80,7 +80,7 @@ export class xsd {
       "%20"
     );
 
-    vscode.workspace.getConfiguration("xml").update(
+    vscode.workspace.getConfiguration("NativescriptExtend").update(
       "fileAssociations",
       [
         {
@@ -103,20 +103,20 @@ export class xsd {
       false
     );
 
-    vscode.workspace.getConfiguration("xml").update(
+    vscode.workspace.getConfiguration("NativescriptExtend").update(
       "completion.autoCloseTags",
       true,
       false
     );
 
-    vscode.workspace.getConfiguration("xml").update(
+    vscode.workspace.getConfiguration("NativescriptExtend").update(
       "format.enabled",
       true,
       false
     );
 
 
-    vscode.workspace.getConfiguration("xml").update(
+    vscode.workspace.getConfiguration("NativescriptExtend").update(
       "validation.enabled",
       true,
       false
@@ -126,17 +126,25 @@ export class xsd {
   /**
    * Create a tns.xsd schema on the user workspace
    */
-  copyXsd(): void {
-    mkdirSync(join(vscode.workspace.rootPath, "schema"))
+  async copyXsd(): Promise<void> {
+    let exists = existsSync(join(vscode.workspace.rootPath, "schema"))
 
-    writeFile(
-      join(vscode.workspace.rootPath, "schema", "tns.xsd"),
-      content,
-      err => {
-        vscode.window.showInformationMessage(
-          "Nativescript code completion and validation is ready on this project"
-        );
-      }
+    if(!exists){
+      mkdirSync(join(vscode.workspace.rootPath, "schema"))
+    }
+
+ let xsd = await readFileSync(join(__dirname,"..","..","schema","tsd.xsd"))
+
+  writeFileSync(
+      join(vscode.workspace.rootPath, "schema", "tns.xsd"), xsd
+    );
+
+
+
+
+
+    vscode.window.showInformationMessage(
+      "Nativescript code completion and validation is ready on this project"
     );
   }
 
@@ -145,7 +153,7 @@ export class xsd {
    */
   async updateXsd() {
     var check = vscode.workspace
-      .getConfiguration("xml")
+      .getConfiguration("NativescriptExtend")
       .has("fileAssociations");
     if (check) {
       await unlinkSync(

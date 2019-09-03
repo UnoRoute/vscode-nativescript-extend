@@ -31,7 +31,6 @@
     "*"
   ],
   "extensionDependencies": [
-    "redhat.vscode-xml",
     "octref.vetur"
   ],
   "main": "./out/extension",
@@ -135,6 +134,95 @@
           "description": "The will enable snippet for the xml, vue and html files",
           "scope": "window"
         },
+        "NativescriptExtend.trace.server": {
+          "type": "string",
+          "enum": [
+            "off",
+            "messages",
+            "verbose"
+          ],
+          "default": "off",
+          "description": "Traces the communication between VS Code and the XML language server.",
+          "scope": "window"
+        },
+        "NativescriptExtend.catalogs": {
+          "type": "array",
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "description": "Array of XML Catalogs",
+          "scope": "window"
+        },
+        "NativescriptExtend.logs.client": {
+          "type": "boolean",
+          "default": true,
+          "description": "Should the server log to client output"
+        },
+        "NativescriptExtend.format.splitAttributes": {
+          "type": "boolean",
+          "default": false,
+          "description": "Split multiple attributes each onto a new line",
+          "scope": "window"
+        },
+        "NativescriptExtend.format.joinCDATALines": {
+          "type": "boolean",
+          "default": false,
+          "description": "Join lines in a CDATA tag's content",
+          "scope": "window"
+        },
+        "NativescriptExtend.format.joinCommentLines": {
+          "type": "boolean",
+          "default": false,
+          "description": "Join comment content on format",
+          "scope": "window"
+        },
+        "NativescriptExtend.format.spaceBeforeEmptyCloseTag": {
+          "type": "boolean",
+          "default": true,
+          "description": "Insert space before end of self closing tag. \nExample:\n  <tag/> -> <tag />",
+          "scope": "window"
+        },
+        "NativescriptExtend.format.joinContentLines": {
+          "type": "boolean",
+          "default": false,
+          "description": "Normalize the whitespace of content inside an element. Newlines and excess whitespace are removed.",
+          "scope": "window"
+        },
+        "NativescriptExtend.format.preserveEmptyContent": {
+          "type": "boolean",
+          "default": false,
+          "description": "Preserve empty content/whitespace in a tag.",
+          "scope": "window"
+        },
+        "NativescriptExtend.format.preservedNewlines": {
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "default": 2,
+          "description": "Preserve new lines that separate tags. The value represents the maximum number of new lines per section. A value of 0 removes all new lines.",
+          "scope": "window"
+        },
+        "NativescriptExtend.format.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/disable ability to format document",
+          "scope": "window"
+        },
+        "NativescriptExtend.format.quotations": {
+          "type": "string",
+          "enum": [
+            "doubleQuotes",
+            "singleQuotes"
+          ],
+          "default": "doubleQuotes",
+          "description": "Which type of quotes to use for attribute values when formatting.",
+          "scope": "window"
+        },
         "NativescriptExtend.fileAssociations": {
           "type": "array",
           "default": [],
@@ -156,10 +244,61 @@
               "pattern"
             ]
           },
-          "description": "Allows XML schemas to be associated to file name patterns.\n\nExample:\n[{\n  \"systemId\": \"path/to/file.xsd\",\n  \"pattern\": \"file1.xml\"\n},\n{\n  \"systemId\": \"http://www.w3.org/2001/XMLSchema.xsdd\",\n  \"pattern\": \"**/*.xsd\"\n}]",
+          "description": "Allows XML schemas to be associated to file name patterns.\n\nExample:\n[{\n  \"systemId\": \"path/to/file.xsd\",\n  \"pattern\": \"file1.xml\"\n},\n{\n  \"systemId\": \"http://www.w3.org/2001/XMLSchema.xsd\",\n  \"pattern\": \"**/*.xsd\"\n}]",
           "markdownDescription": "Allows XML schemas to be associated to file name patterns.\n\nExample:\n```json\n[{\n  \"systemId\": \"path/to/file.xsd\",\n  \"pattern\": \"file1.xml\"\n},\n{\n  \"systemId\": \"http://www.w3.org/2001/XMLSchema.xsd\",\n  \"pattern\": \"**/*.xsd\"\n}]\n```",
-          "scope": "resource"
+          "scope": "window"
+        },
+        "NativescriptExtend.completion.autoCloseTags": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/disable autoclosing of XML tags. \n\nIMPORTANT: Turn off editor.autoClosingTags for this to work",
+          "scope": "application"
+        },
+        "NativescriptExtend.server.vmargs": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": "-noverify -Xmx64M -XX:+UseG1GC -XX:+UseStringDeduplication",
+          "description": "Specifies extra VM arguments used to launch the XML Language Server. Eg. use `-noverify -Xmx1G  -XX:+UseG1GC -XX:+UseStringDeduplication` to bypass class verification, increase the heap size to 1GB and enable String deduplication with the G1 Garbage collector",
+          "scope": "window"
+        },
+        "NativescriptExtend.server.workDir": {
+          "type": "string",
+          "default": "~/.NativescriptExtend",
+          "description": "Set a custom folder path for cached XML Schemas. An absolute path is expected, although the ~ prefix (for the user home directory) is supported.",
+          "scope": "window"
+        },
+        "NativescriptExtend.validation.noGrammar": {
+          "type": "string",
+          "enum": [
+            "ignore",
+            "hint",
+            "info",
+            "warning",
+            "error"
+          ],
+          "default": "hint",
+          "description": "The message severity when a document has no associated grammar.",
+          "scope": "window"
+        },
+        "NativescriptExtend.validation.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/disable all validation.",
+          "scope": "window"
+        },
+        "NativescriptExtend.validation.schema": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/disable schema based validation. Ignored if \"xml.validation.enabled\": false.",
+          "scope": "window"
         }
+      }
+    },
+    "configurationDefaults": {
+      "[xml]": {
+        "editor.autoClosingBrackets": "never"
       }
     }
   },
@@ -175,16 +314,17 @@
     "glob": "^7.1.4",
     "path-exists": "^4.0.0",
     "tslib": "^1.10.0",
+    "tar": ">=4.4.2",
     "universal-analytics": "^0.4.20"
   },
   "devDependencies": {
     "@types/mocha": "^5.2.7",
-    "@types/node": "^12.7.1",
+    "@types/node": "^12.7.4",
     "gulp": "^4.0.2",
     "gulp-tslint": "^8.1.4",
     "mocha": "^6.2.0",
-    "tslint": "^5.18.0",
-    "typescript": "^3.5.3",
+    "tslint": "^5.19.0",
+    "typescript": "^3.6.2",
     "vscode": "^1.1.36",
     "vscode-languageclient": "^5.2.1"
   }
