@@ -61,6 +61,9 @@ export class xsd {
                 break;
             }
           });
+      } else {
+        this.copyXsd();
+        this.setConfig();
       }
     });
 
@@ -129,17 +132,15 @@ export class xsd {
   async copyXsd(): Promise<void> {
     let exists = existsSync(join(vscode.workspace.rootPath, "schema"))
 
-    if(!exists){
+    if (!exists) {
       mkdirSync(join(vscode.workspace.rootPath, "schema"))
     }
 
- let xsd = await readFileSync(join(__dirname,"..","..","schema","tsd.xsd"))
+    let xsd = await readFileSync(join(__dirname, "..", "..", "schema", "tsd.xsd"))
 
-  writeFileSync(
+    writeFileSync(
       join(vscode.workspace.rootPath, "schema", "tns.xsd"), xsd
     );
-
-
 
 
 
