@@ -2,6 +2,13 @@
 
 <!-- ## [Unreleased]
 - Initial release -->
+## [2.8.0] - 2019-9-03
+- Security update
+- XML update 
+- XML Fix 
+- XML intelisense updated 
+- Fix XML validation
+  
 ## [2.7.4] - 2019-8-09
 - Security update
 - Command Palette Updated

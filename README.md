@@ -19,16 +19,12 @@ This extension comes with snippets, emulator executor, context menu for Nativesc
 
 # Changes
 
-## [2.7.4] - 2019-8-09
+## [2.8.0] - 2019-9-03
 - Security update
-- Command Palette Updated
-- XML schema updated
-    - Scrollview attributes updated
-    - Tabview attributes and validation updates
-    - Docklayout attributes updated
-    - Flexboxlayout attributes updates
-    - Listview attributes updated
-  
+- XML update 
+- XML Fix 
+- XML intelisense updated 
+- Fix XML validation
 
 # Features
 
