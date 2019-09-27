@@ -2,6 +2,11 @@
 
 <!-- ## [Unreleased]
 - Initial release -->
+## [2.10.0] - 2019-9-27
+- Security update
+- NSE Command Palette updated 
+- Users can now create new pages from the command palette and it will be located at the `{workspace_directory}/app/views`
+
 ## [2.8.0] - 2019-9-03
 - Security update
 - XML update 

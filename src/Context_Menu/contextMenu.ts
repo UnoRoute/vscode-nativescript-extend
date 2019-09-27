@@ -1,5 +1,6 @@
 import { createPage } from "./createPage";
 import * as vscode from "vscode";
+import { join } from 'path';
 /**
  * context menu Class
  * @author Paul Ehigie Paul
@@ -28,7 +29,11 @@ export class contextMenu extends createPage implements IContext {
     this.ctx.subscriptions.push(
       vscode.commands.registerCommand("NativescriptExtend.addJSPage", arg => {
         vscode.window.showInputBox().then(e => {
-          this.javascript(arg.fsPath, e.toLowerCase());
+          if(arg){
+            this.javascript(arg.fsPath, e.toLowerCase());
+          }else{
+            this.javascript(join(vscode.workspace.rootPath,"app","views"), e.toLowerCase())
+          }
         });
       })
     );
@@ -37,7 +42,11 @@ export class contextMenu extends createPage implements IContext {
     this.ctx.subscriptions.push(
       vscode.commands.registerCommand("NativescriptExtend.addTsPage", arg => {
         vscode.window.showInputBox().then(e => {
-          this.typescript(arg.fsPath, e.toLowerCase());
+          if(arg){
+            this.typescript(arg.fsPath, e.toLowerCase());
+          }else{
+            this.typescript(join(vscode.workspace.rootPath,"app","views"), e.toLowerCase())
+          }
         });
       })
     );
@@ -46,7 +55,11 @@ export class contextMenu extends createPage implements IContext {
     this.ctx.subscriptions.push(
       vscode.commands.registerCommand("NativescriptExtend.addVuePage", arg => {
         vscode.window.showInputBox().then(e => {
-          this.vue(arg.fsPath, e.toLowerCase());
+          if(arg){
+            this.vue(arg.fsPath, e.toLowerCase());
+          }else{
+            this.vue(join(vscode.workspace.rootPath,"app","views"), e.toLowerCase())
+          }
         });
       })
     );
@@ -55,7 +68,11 @@ export class contextMenu extends createPage implements IContext {
     this.ctx.subscriptions.push(
       vscode.commands.registerCommand("NativescriptExtend.addNGPage", arg => {
         vscode.window.showInputBox().then(e => {
-          this.angular(arg.fsPath, e.toLowerCase());
+          if(arg){
+            this.angular(arg.fsPath, e.toLowerCase());
+          }else{
+            this.angular(join(vscode.workspace.rootPath,"app","views"), e.toLowerCase())
+          }
         });
       })
     );

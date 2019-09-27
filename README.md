@@ -19,27 +19,31 @@ This extension comes with snippets, emulator executor, context menu for Nativesc
 
 # Changes
 
-## [2.8.0] - 2019-9-03
+## [2.10.0] - 2019-9-27
 - Security update
-- XML update 
-- XML Fix 
-- XML intelisense updated 
-- Fix XML validation
+- NSE Command Palette updated 
+- Users can now create new pages from the command palette and it will be located at the `{workspace_directory}/app/views`
+
 
 # Features
 
 - ### Nativescript intellisense and XML validation.
-  ![intellisense](https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/intellisense.gif)
+ <img height="500" width="auto" src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/intellisense.gif"/>
+
 - ### Emulator
-  ![emulator](https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/emulator.gif)
+  <img height="500" width="auto" src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/emulator.gif"/>
+
 - ### Emulator auto setup
-  ![emulator auto setup](https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/auto%20setup.gif)
+  <img height="500" width="auto" src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/auto%20setup.gif"/>
+
 - ### Snippets
-  ![snippets](https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/snippets.gif)
+  <img height="500" width="auto" src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/snippets.gif"/>
+
 - ### Snippets toggler
-  ![snippets](https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/toggle%20snippets.gif)
+  <img  width="700px" src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/toggle%20snippets.gif"/>
+
 - ### Explorer Context Menu Page Creation,
-  ![Context Menu](https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/cm.gif)
+ <img height="500" width="auto" src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/cm.gif"/>
 
 # Snippets Components keys
 

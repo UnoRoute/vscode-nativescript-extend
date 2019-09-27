@@ -1,5 +1,6 @@
 import { contents } from "./contents";
 import { util } from "./util";
+import * as vscode from 'vscode'
 
 /**
  * This is the create content class
@@ -25,6 +26,7 @@ export class createPage {
       this.content.viewModelJs(name)
     );
 
+    vscode.window.showInformationMessage(`Location Path: ${path}`);
     // TODO implement here
   }
 
@@ -40,6 +42,7 @@ export class createPage {
       `${name}-view-model.ts`,
       this.content.viewModelTs(name)
     );
+    vscode.window.showInformationMessage(`Location Path: ${path}`);
   }
 
   /**
@@ -60,6 +63,7 @@ export class createPage {
       this.content.componentTs(name)
     );
     util.createFile(path, `${name}-module.ts`, this.content.moduleTs(name));
+    vscode.window.showInformationMessage(`Location Path: ${path}`);
   }
 
   /**
@@ -68,5 +72,6 @@ export class createPage {
   vue(path: string, name: string): void {
     // TODO implement here
     util.createFile(path, `${name}.vue`, this.content.vueFile(name), true);
+    vscode.window.showInformationMessage(`Location Path: ${path}`);
   }
 }
