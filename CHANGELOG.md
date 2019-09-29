@@ -2,6 +2,11 @@
 
 <!-- ## [Unreleased]
 - Initial release -->
+## [2.11.0] - 2019-9-29
+- Updated xml validation
+- Updated the view attributes
+- added BottomNavigation tag. This will help you build bottom navigation tabs. Kindly read more on it [here](https://docs.nativescript.org/ui/components/bottom-navigation)
+
 ## [2.10.0] - 2019-9-27
 - Security update
 - NSE Command Palette updated 

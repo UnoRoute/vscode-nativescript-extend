@@ -125,6 +125,7 @@
   <xs:element name="bindable" type="Bindable" />
   <!-- View class section -->
   <xs:attributeGroup name="viewAttributes">
+    <xs:attribute name="alignSelf" type="alignSelfValidator" />
     <xs:attribute name="automationText" type="StringValidator" />
     <xs:attribute name="background" type="StringValidator" />
     <xs:attribute name="backgroundColor" type="ColorValidator" />
@@ -150,13 +151,13 @@
     <xs:attribute name="unloaded" type="StringValidator" />
     <xs:attribute name="minWidth" type="NumberValidator" />
     <xs:attribute name="minHeight" type="NumberValidator" />
-    <xs:attribute name="width" type="NumberValidator" />
-    <xs:attribute name="height" type="NumberValidator" />
-    <xs:attribute name="margin" type="StringValidator" />
-    <xs:attribute name="marginLeft" type="NumberValidator" />
-    <xs:attribute name="marginTop" type="NumberValidator" />
-    <xs:attribute name="marginRight" type="NumberValidator" />
-    <xs:attribute name="marginBottom" type="NumberValidator" />
+    <xs:attribute name="width" type="PercentLengthValidator" />
+    <xs:attribute name="height" type="PercentLengthValidator" />
+    <xs:attribute name="margin" type="PercentLengthValidator" />
+    <xs:attribute name="marginLeft" type="PercentLengthValidator" />
+    <xs:attribute name="marginTop" type="PercentLengthValidator" />
+    <xs:attribute name="marginRight" type="PercentLengthValidator" />
+    <xs:attribute name="marginBottom" type="PercentLengthValidator" />
     <xs:attribute name="horizontalAlignment" type="HorizontalAlignmentValidator" />
     <xs:attribute name="verticalAlignment" type="VerticalAlignmentValidator" />
     <xs:attribute name="visibility" type="VisibilityValidator" />
@@ -197,6 +198,10 @@
     <xs:attribute name="onswipe" type="StringValidator" />
     <xs:attribute name="rotation" type="StringValidator" />
     <xs:attribute name="onrotation" type="StringValidator" />
+    <xs:attribute name="flexGrow" type="NumberValidator" />
+    <xs:attribute name="flexShrink" type="NumberValidator" />
+    <xs:attribute name="flexWrap" type="FlexWrapValidator" />
+    <xs:attribute name="flexWrapBefore" type="BooleanValidator" />
   </xs:attributeGroup>
   <xs:complexType name="View">
     <xs:attributeGroup ref="viewAttributes" />
@@ -321,6 +326,82 @@
   </xs:complexType>
   <xs:element name="DockLayout" type="DockLayout" />
   <xs:element name="dock-layout" type="DockLayout" />
+
+  <!--TabNavigationBase Section-->
+  <xs:attributeGroup name="TabNavigationBaseAttributes">
+    <xs:attribute name="items" type="xs:anyURI"   />
+    <xs:attribute name="selectedIndex" type="NumberValidator"   />
+    <xs:attribute name="tabStrip" type="NumberValidator"   />
+  </xs:attributeGroup>
+  <xs:complexType name="TabNavigationBase" >
+    <xs:complexContent>
+      <xs:extension base="View">
+        <xs:attributeGroup ref="TabNavigationBaseAttributes"  />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TabNavigationBase" type="TabNavigationBase"/>  
+  
+  <!--BottomNavigation Section-->
+  <xs:attributeGroup name="BottomNavigationAttributes"/>
+  <xs:complexType name="BottomNavigation" >
+    <xs:complexContent >
+      <xs:extension base="TabNavigationBase">
+        <xs:sequence maxOccurs="5">
+          <xs:choice >
+          <xs:element name="TabStrip" type="TabStrip"  />
+          <xs:element name="TabContentItem" type="TabContentItem" />
+          </xs:choice>
+        </xs:sequence>
+        <xs:attributeGroup ref="BottomNavigationAttributes"  />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BottomNavigation" type="BottomNavigation"/> 
+  
+  <!--TabStrip  Section-->
+  <xs:attributeGroup name="TabStripAttributes">
+    <xs:attribute name="iosIconRenderingMode" type="iosIconRenderingModeValidator"   />
+    <xs:attribute name="isIconSizeFixed" type="BooleanValidator"   />
+  </xs:attributeGroup>
+  <xs:complexType name="TabStrip" >
+    <xs:complexContent>
+      <xs:extension base="View">
+        <xs:sequence>
+          <xs:element name="TabStripItem" type="TabStripItem" />
+        </xs:sequence>
+        <xs:attributeGroup ref="TabStripAttributes"  />     
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TabStrip " type="TabStrip"/> 
+  
+  <!--TabContentItem  Section-->
+  <xs:attributeGroup name="TabContentItemAttributes"/>
+  <xs:complexType name="TabContentItem" >
+    <xs:complexContent>
+      <xs:extension base="ContentView">
+        
+        <xs:attributeGroup ref="TabContentItemAttributes"  />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TabContentItem" type="TabContentItem"/>  
+  
+  <!--TabStripItem  Section-->
+  <xs:attributeGroup name="TabStripItemAttributes"/>
+  <xs:complexType name="TabStripItem" >
+    <xs:complexContent>
+      <xs:extension base="View">
+        <xs:sequence>
+          <xs:any maxOccurs="2" processContents="lax" />
+        </xs:sequence>
+        <xs:attributeGroup ref="TabStripItemAttributes"  />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TabStripItem" type="TabStripItem"/>
+  
   <!-- Gridlayout section -->
   <xs:attributeGroup name="gridLayoutAttributes">
     <xs:attribute name="rows" type="StringValidator" />
@@ -335,6 +416,7 @@
   </xs:complexType>
   <xs:element name="GridLayout" type="GridLayout" />
   <xs:element name="grid-layout" type="GridLayout" />
+  
   <!-- Layout Base Section -->
   <xs:attributeGroup name="layoutBaseAttributes">
     <xs:attribute name="padding" type="StringValidator" />
@@ -369,13 +451,13 @@
   <xs:attributeGroup name="flexboxLayoutAttributes">
     <xs:attribute name="alignContent" type="StringValidator" />
     <xs:attribute name="alignItems" type="StringValidator" />
-    <xs:attribute name="alignSelf" type="StringValidator" />
+    <!--<xs:attribute name="alignSelf" type="alignSelfValidator" />-->
     <xs:attribute name="flexDirection" type="StringValidator" />
-    <xs:attribute name="flexGrow" type="NumberValidator" />
-    <xs:attribute name="flexShrink" type="NumberValidator" />
-    <xs:attribute name="flexWrap" type="StringValidator" />
-    <xs:attribute name="flexWrapBefore" type="BooleanValidator" />
-    <xs:attribute name="justifyContent" type="StringValidator" />
+    <!--<xs:attribute name="flexGrow" type="NumberValidator" />-->
+    <!--<xs:attribute name="flexShrink" type="NumberValidator" />-->
+    <!--<xs:attribute name="flexWrap" type="FlexWrapValidator" />-->
+    <!--<xs:attribute name="flexWrapBefore" type="BooleanValidator" />-->
+    <xs:attribute name="justifyContent" type="JustifyContentValidator" />
     <xs:attribute name="order" type="NumberValidator" />
   </xs:attributeGroup>
   <xs:complexType name="FlexboxLayout">
@@ -496,7 +578,7 @@
   <!--    Style Vue section-->
   <xs:complexType name="Style">
     <xs:sequence>
-      <xs:any maxOccurs="1" processContents="skip" />
+      <xs:any maxOccurs="unbounded" processContents="skip" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Style" type="Style" />
@@ -666,12 +748,14 @@
   <xs:attributeGroup name="tabViewAttributes">
     <xs:attribute name="items" type="StringValidator" />
     <xs:attribute name="selectedIndex" type="NumberValidator" />
+    <xs:attribute name="androidOffscreenTabLimit" type="NumberValidator" />
     <xs:attribute name="selectedTabTextColor" type="ColorValidator" />
     <xs:attribute name="tabsBackgroundColor" type="ColorValidator" />
     <xs:attribute name="tabTextColor" type="ColorValidator" />
     <xs:attribute name="tabTextFontSize" type="NumberValidator" />
     <xs:attribute name="selectedIndexChanged" type="StringValidator" />
     <xs:attribute name="androidSelectedTabHighlightColor" type="ColorValidator" />
+    <xs:attribute name="iosIconRenderingMode" type="iosIconRenderingModeValidator" />
   </xs:attributeGroup>
   <xs:complexType name="TabView">
     <xs:complexContent>
@@ -844,6 +928,44 @@
         </xs:restriction>
       </xs:simpleType>
     </xs:union>
+  </xs:simpleType>   
+  <xs:simpleType name="FlexWrapValidator">
+    <xs:union memberTypes="BindingValidator">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="nowrap" />
+          <xs:enumeration value="wrap" />
+          <xs:enumeration value="wrap-reverse" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType> 
+  <xs:simpleType name="JustifyContentValidator">
+    <xs:union memberTypes="BindingValidator">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="flex-start" />
+          <xs:enumeration value="flex-end" />
+          <xs:enumeration value="center" />
+          <xs:enumeration value="space-between" />
+          <xs:enumeration value="space-around" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType> 
+  <xs:simpleType name="alignSelfValidator">
+    <xs:union memberTypes="BindingValidator">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="auto" />
+          <xs:enumeration value="flex-start" />
+          <xs:enumeration value="flex-end" />
+          <xs:enumeration value="center" />
+          <xs:enumeration value="baseline" />
+          <xs:enumeration value="stretch" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
   </xs:simpleType>
   <xs:simpleType name="TextDecorationValidator">
     <xs:union memberTypes="BindingValidator">
@@ -877,6 +999,17 @@
           <xs:enumeration value="initial" />
           <xs:enumeration value="normal" />
           <xs:enumeration value="nowrap" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType> 
+  <xs:simpleType name="iosIconRenderingModeValidator">
+    <xs:union memberTypes="BindingValidator">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="automatic" />
+          <xs:enumeration value="alwaysOriginal" />
+          <xs:enumeration value="alwaysTemplate" />
         </xs:restriction>
       </xs:simpleType>
     </xs:union>
@@ -951,6 +1084,15 @@
     <xs:union memberTypes="BindingValidator">
       <xs:simpleType>
         <xs:restriction base="xs:integer" />
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType> 
+  <xs:simpleType name="PercentLengthValidator">
+    <xs:union memberTypes="BindingValidator">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="\d+(%)?(px)?"/>
+        </xs:restriction> 
       </xs:simpleType>
     </xs:union>
   </xs:simpleType>

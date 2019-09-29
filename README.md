@@ -1,4 +1,5 @@
 <div align="center">
+<image src="image/icon.png" />
 <h1>NativeScript Extend for Visual Studio Code</h1>
 
 [![vscode](https://img.shields.io/badge/vscode-v1.28+-373277.svg?style=for-the-badge)](https://code.visualstudio.com/updates/v1_28)[![made in nigeria](https://img.shields.io/badge/made%20in-nigeria-008751.svg?style=for-the-badge)](https://github.com/ehigiepaul/vscode-nativescript-extend)[![Marketplace Version](https://vsmarketplacebadge.apphb.com/version/paul-ehigie-paul.nativescript-extend.svg?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=paul-ehigie-paul.nativescript-extend)
@@ -18,8 +19,10 @@ This extension comes with snippets, emulator executor, context menu for Nativesc
 > Please if anyone has any feature or fix on this extension, please kindly make a request on our [Github](https://github.com/ehigiepaul/vscode-nativescript-extend/issues) repository.
 
 # Changes
-
-## [2.10.0] - 2019-9-27
+## [2.11.0] - 2019-9-29
+- Updated xml validation
+- Updated the view attributes
+- added BottomNavigation tag. This will help you build bottom navigation tabs. Kindly read more on it [here](https://docs.nativescript.org/ui/components/bottom-navigation)
 - Security update
 - NSE Command Palette updated 
 - Users can now create new pages from the command palette and it will be located at the `{workspace_directory}/app/views`
@@ -27,22 +30,22 @@ This extension comes with snippets, emulator executor, context menu for Nativesc
 
 # Features
 
-- ### Nativescript intellisense and XML validation.
+## Nativescript intellisense and XML validation.
  <img height="500" width="auto" src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/intellisense.gif"/>
 
-- ### Emulator
+## Emulator
   <img height="500" width="auto" src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/emulator.gif"/>
 
-- ### Emulator auto setup
+## Emulator auto setup
   <img height="500" width="auto" src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/auto%20setup.gif"/>
 
-- ### Snippets
+## Snippets
   <img height="500" width="auto" src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/snippets.gif"/>
 
-- ### Snippets toggler
+## Snippets toggler
   <img  width="700px" src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/toggle%20snippets.gif"/>
 
-- ### Explorer Context Menu Page Creation,
+## Explorer Context Menu Page Creation,
  <img height="500" width="auto" src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/cm.gif"/>
 
 # Snippets Components keys
