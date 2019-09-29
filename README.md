@@ -1,5 +1,5 @@
 <div align="center">
-<image src="image/icon.png" />
+<image src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/icon.png" />
 <h1>NativeScript Extend for Visual Studio Code</h1>
 
 [![vscode](https://img.shields.io/badge/vscode-v1.28+-373277.svg?style=for-the-badge)](https://code.visualstudio.com/updates/v1_28)[![made in nigeria](https://img.shields.io/badge/made%20in-nigeria-008751.svg?style=for-the-badge)](https://github.com/ehigiepaul/vscode-nativescript-extend)[![Marketplace Version](https://vsmarketplacebadge.apphb.com/version/paul-ehigie-paul.nativescript-extend.svg?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=paul-ehigie-paul.nativescript-extend)
