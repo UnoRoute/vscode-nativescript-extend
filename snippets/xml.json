@@ -43,7 +43,6 @@
             "</StackLayout>"
         ],
         "description": "The StackLayout stacks its child elements below or beside each other, depending on its orientation. It is very useful to create lists."
-
     },
     "{NS} Wrap Layout": {
         "prefix": "NSwrap",
@@ -278,7 +277,6 @@
             "</Repeater>"
         ]
     },
-
     // Widgets
     "{NS} Page": {
         "prefix": "NSpage",
@@ -293,6 +291,41 @@
         "body": [
             "<Image src=\"\" stretch=\"none\" />",
             ""
+        ]
+    },
+    "{NS} BottomNavigation": {
+        "prefix": "NSBottomNav",
+        "body": [
+            "<BottomNavigation selectedIndex=\"1\">",
+            " ",
+            "</BottomNavigation>",
+            ""
+        ]
+    },
+    "{NS} TabStrip": {
+        "prefix": "NSTabStrip",
+        "body": [
+            "<TabStrip>",
+            " ",
+            "</TabStrip>",
+            ""
+        ]
+    },
+    "{NS} TabStripItem": {
+        "prefix": "NSTabStripItem",
+        "body": [
+            "<TabStripItem>",
+            "<Label text=\"Home\"/>",
+            "<Image src=\"font://&#xf015;\" class=\"fas\"/>",
+            "</TabStripItem>"
+        ]
+    },
+    "{NS} TabContentItem": {
+        "prefix": "NSTabContentItem",
+        "body": [
+            "<TabContentItem>",
+            " ",
+            "</TabContentItem>"
         ]
     },
     "{NS} Label": {
@@ -426,7 +459,6 @@
             "<NavigationButton text=\"Go Back\" tap=\"onNavBtnTap\"/>"
         ]
     },
-
     // Attributes
     "{NS} Color Attribute": {
         "prefix": "color",
@@ -480,7 +512,6 @@
         "prefix": "borderWidth",
         "body": "borderWidth=\"\""
     },
-
     "{NS} IOS Safe Area Attribute": {
         "prefix": "iosOverflowSafeArea",
         "body": "iosOverflowSafeArea=true"
@@ -497,7 +528,6 @@
         "prefix": "style",
         "body": "style=\"\""
     },
-
     "{NS} xmlns Attribute": {
         "prefix": "xmlns",
         "body": "xmlns:=\"\""
@@ -506,12 +536,10 @@
         "prefix": "actionBarHidden",
         "body": "actionBarHidden=\"true\""
     },
-
     "{NS} Icon Attribute": {
         "prefix": "icon",
         "body": "icon=\"res://\""
     },
-
     "{NS} Text Wrap Attribute": {
         "prefix": "wrap",
         "body": "textWrap=\"true\""
@@ -556,7 +584,6 @@
         "body": "itemHeight=\"\"",
         "description": "Gets or sets the height used to measure and layout each child. Default value is Number.NaN, which does not restrict children."
     },
-
     // gestures attributes
     "{NS} tap Attribute": {
         "prefix": "tap",
@@ -603,16 +630,12 @@
         "body": "touch=\"\"",
         "description": "Action: This is a general purpose gesture that is triggered whenever a pointer (usually a finger) has performed a touch action (up, down, move or cancel). TouchGestureEventData provides information about all the pointers currently on the screen and their position inside the view that triggered the event."
     },
-
-
     // StackLayout properties
-
     "{NS} orientation Attribute": {
         "prefix": "orientation",
         "body": "orientation=\"\"",
         "description": "Gets or sets a value indicating whether the child items should be stacked in the horizontal or vertical direction. Possible values are vertical and horizontal. The default value is vertical."
     },
-
     // GridLayout properties
     "{NS} Row Attribute": {
         "prefix": "row",
@@ -644,7 +667,6 @@
         "body": "rowSpan=\"\"",
         "description": "Gets or sets a value that indicates the total number of rows that child content spaNS within a GridLayout."
     },
-
     // DockLayout properties
     "{NS} DockLayout Dock Attribute": {
         "prefix": "dock",
@@ -707,5 +729,4 @@
         "body": "flexWrapBefore=\"\"",
         "description": "Gets or sets a boolean value controlling item wrapping. Setting it to true on flexbox item will force it to wrap on a new line. The default value is false. This property is not part of the official flexbox specification."
     }
-
 }

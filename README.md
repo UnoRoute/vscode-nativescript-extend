@@ -68,6 +68,10 @@ This extension comes with snippets, emulator executor, context menu for Nativesc
 - Text View - `NStextview`
 - Image - `NSimg`
 - Border - `NSborder`
+- BottomNavigation - `NSBottomNav`
+- TabStrip - `NSTabStrip`
+- TabStripItem - `NSTabStripItem`
+- TabContentItem - `NSTabContentItem`
 - Button - `NSbtn`
 - Search Bar - `NSsearchbar`
 - Switch - `NSswitch`
