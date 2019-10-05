@@ -32,7 +32,7 @@ export class contextMenu extends createPage implements IContext {
           if(arg){
             this.javascript(arg.fsPath, e.toLowerCase());
           }else{
-            this.javascript(join(vscode.workspace.rootPath,"app","views"), e.toLowerCase())
+            this.javascript(join(vscode.workspace.workspaceFolders[0].uri.fsPath,"app","views"), e.toLowerCase())
           }
         });
       })
@@ -45,7 +45,7 @@ export class contextMenu extends createPage implements IContext {
           if(arg){
             this.typescript(arg.fsPath, e.toLowerCase());
           }else{
-            this.typescript(join(vscode.workspace.rootPath,"app","views"), e.toLowerCase())
+            this.typescript(join(vscode.workspace.workspaceFolders[0].uri.fsPath,"app","views"), e.toLowerCase())
           }
         });
       })
@@ -58,7 +58,7 @@ export class contextMenu extends createPage implements IContext {
           if(arg){
             this.vue(arg.fsPath, e.toLowerCase());
           }else{
-            this.vue(join(vscode.workspace.rootPath,"app","views"), e.toLowerCase())
+            this.vue(join(vscode.workspace.workspaceFolders[0].uri.fsPath,"app","views"), e.toLowerCase())
           }
         });
       })
@@ -71,7 +71,7 @@ export class contextMenu extends createPage implements IContext {
           if(arg){
             this.angular(arg.fsPath, e.toLowerCase());
           }else{
-            this.angular(join(vscode.workspace.rootPath,"app","views"), e.toLowerCase())
+            this.angular(join(vscode.workspace.workspaceFolders[0].uri.fsPath,"app","views"), e.toLowerCase())
           }
         });
       })

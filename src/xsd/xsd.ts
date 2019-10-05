@@ -14,7 +14,7 @@ export class xsd {
     this.checkValidation();
     // this.updateXsd();
     // console.log(join(__dirname))
-    // console.log(vscode.workspace.rootPath);
+    // console.log(vscode.workspace.workspaceFolders[0].uri.fsPath);
     // console.log('xsd works')
   }
 
@@ -39,8 +39,8 @@ export class xsd {
    */
   checkValidation(): void {
     let folder = vscode.workspace.workspaceFolders[0].uri.fsPath;
-    var schema = join(vscode.workspace.rootPath, "schema", "tns.xsd");
-    var config = join(vscode.workspace.rootPath, ".vscode", "settings.json");
+    var schema = join(vscode.workspace.workspaceFolders[0].uri.fsPath, "schema", "tns.xsd");
+    var config = join(vscode.workspace.workspaceFolders[0].uri.fsPath, ".vscode", "settings.json");
 
     exists(schema, exists => {
       if (!exists) {
@@ -78,7 +78,7 @@ export class xsd {
    * Add configuration to the users setings
    */
   setConfig() {
-    var schema = join(vscode.workspace.rootPath, "schema", "tns.xsd").replace(
+    var schema = join(vscode.workspace.workspaceFolders[0].uri.fsPath, "schema", "tns.xsd").replace(
       /(\s+)/g,
       "%20"
     );
@@ -130,16 +130,16 @@ export class xsd {
    * Create a tns.xsd schema on the user workspace
    */
   async copyXsd(): Promise<void> {
-    let exists = existsSync(join(vscode.workspace.rootPath, "schema"))
+    let exists = existsSync(join(vscode.workspace.workspaceFolders[0].uri.fsPath, "schema"))
 
     if (!exists) {
-      mkdirSync(join(vscode.workspace.rootPath, "schema"))
+      mkdirSync(join(vscode.workspace.workspaceFolders[0].uri.fsPath, "schema"))
     }
 
     let xsd = await readFileSync(join(__dirname, "..", "..", "schema", "tsd.xsd"))
 
     writeFileSync(
-      join(vscode.workspace.rootPath, "schema", "tns.xsd"), xsd
+      join(vscode.workspace.workspaceFolders[0].uri.fsPath, "schema", "tns.xsd"), xsd
     );
 
 
@@ -158,7 +158,7 @@ export class xsd {
       .has("fileAssociations");
     if (check) {
       await unlinkSync(
-        join(vscode.workspace.rootPath, ".vscode", "settings.json")
+        join(vscode.workspace.workspaceFolders[0].uri.fsPath, ".vscode", "settings.json")
       );
       this.setConfig();
     }

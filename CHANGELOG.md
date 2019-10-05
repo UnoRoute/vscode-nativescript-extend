@@ -2,6 +2,10 @@
 
 <!-- ## [Unreleased]
 - Initial release -->
+## [2.11.3] - 2019-10-4
+- Changes Vscode rootpath to workspaces due to changes on the VSCODE api.
+- Modules Update
+
 ## [2.11.0] - 2019-9-29
 - Updated xml validation
 - Updated the view attributes
@@ -16,7 +20,7 @@
 - Security update
 - XML update 
 - XML Fix 
-- XML intelisense updated 
+- XML intellisense updated 
 - Fix XML validation
   
 ## [2.7.4] - 2019-8-09
@@ -29,7 +33,6 @@
     - Flexboxlayout attributes updates
     - Listview attributes updated
   
-
 ## [2.7.1] - 2019-8-08
 - Security update
 - Command Palette Updated
