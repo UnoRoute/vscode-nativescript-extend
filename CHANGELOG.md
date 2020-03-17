@@ -2,7 +2,10 @@
 
 <!-- ## [Unreleased]
 - Initial release -->
-## [2.11.3] - 2019-10-4
+## [2.11.8] - 2019-10-4 6186
+- Minor Patch
+
+## [2.11.3] - 2019-10-4 6186
 - Changes Vscode rootpath to workspaces due to changes on the VSCODE api.
 - Modules Update
 
