@@ -2,7 +2,7 @@
   "name": "nativescript-extend",
   "displayName": "Nativescript Extend",
   "description": "Nativescript extend tool pack, helps Nativescript developers create cross-platform mobiles easliy with the support of snippets, a xml validator and a run emulator from VSCode",
-  "version": "2.11.7",
+  "version": "2.11.8",
   "icon": "image/icon.png",
   "publisher": "Paul-Ehigie-Paul",
   "repository": {
