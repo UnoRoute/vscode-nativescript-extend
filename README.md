@@ -19,7 +19,7 @@ This extension comes with snippets, emulator executor, context menu for Nativesc
 > Please if anyone has any feature or fix on this extension, please kindly make a request on our [Github](https://github.com/ehigiepaul/vscode-nativescript-extend/issues) repository.
 
 # Changes
-## [2.11.5] - 2020-3-17
+## [2.11.6] - 2020-3-17
 - Minor fix
 
 
