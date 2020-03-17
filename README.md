@@ -19,13 +19,8 @@ This extension comes with snippets, emulator executor, context menu for Nativesc
 > Please if anyone has any feature or fix on this extension, please kindly make a request on our [Github](https://github.com/ehigiepaul/vscode-nativescript-extend/issues) repository.
 
 # Changes
-## [2.11.0] - 2019-9-29
-- Updated xml validation
-- Updated the view attributes
-- added BottomNavigation tag. This will help you build bottom navigation tabs. Kindly read more on it [here](https://docs.nativescript.org/ui/components/bottom-navigation)
-- Security update
-- NSE Command Palette updated 
-- Users can now create new pages from the command palette and it will be located at the `{workspace_directory}/app/views`
+## [2.11.4] - 2020-3-17
+- Minor fix
 
 
 # Features
