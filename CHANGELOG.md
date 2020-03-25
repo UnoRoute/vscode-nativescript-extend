@@ -2,6 +2,10 @@
 
 <!-- ## [Unreleased]
 - Initial release -->
+## [2.11.9] - 2020-3-25
+- Minor fix
+- Snippet columns corrections
+
 ## [2.11.8] - 2019-10-4 6186
 - Minor Patch
 

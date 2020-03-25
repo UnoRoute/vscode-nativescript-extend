@@ -74,7 +74,7 @@
     "{NS} Grid Layout": {
         "prefix": "NSgrid",
         "body": [
-            "<GridLayout rows=\"\" colums=\"\">",
+            "<GridLayout rows=\"\" columns=\"\">",
             "    $3",
             "</GridLayout>"
         ]
@@ -82,7 +82,7 @@
     "{NS} Grid Layout 2x2": {
         "prefix": "NSgrid_2x2",
         "body": [
-            "<GridLayout rows=\"*, *\" colums=\"*, *\">",
+            "<GridLayout rows=\"*, *\" columns=\"*, *\">",
             "    <Label text=\"0, 0\" row=\"0\" col=\"0\" />",
             "    <Label text=\"0, 1\" row=\"0\" col=\"1\" />",
             "    <Label text=\"1, 0\" row=\"1\" col=\"0\" />",
@@ -93,7 +93,7 @@
     "{NS} Grid Layout 2x2 Automatic Width/Height": {
         "prefix": "NSgrid_2x2_auto",
         "body": [
-            "<GridLayout rows=\"auto, auto\" colums=\"auto, auto\">",
+            "<GridLayout rows=\"auto, auto\" columns=\"auto, auto\">",
             "    <Label text=\"0, 0\" row=\"0\" col=\"0\" />",
             "    <Label text=\"0, 1\" row=\"0\" col=\"1\" />",
             "    <Label text=\"1, 0\" row=\"1\" col=\"0\" />",
@@ -104,7 +104,7 @@
     "{NS} Grid Layout 3x3 ": {
         "prefix": "NSgrid_3x3",
         "body": [
-            "<GridLayout rows=\"*, *, *\" colums=\"*, *, *\">",
+            "<GridLayout rows=\"*, *, *\" columns=\"*, *, *\">",
             "    <Label text=\"0, 0\" row=\"0\" col=\"0\" />",
             "    <Label text=\"0, 1\" row=\"0\" col=\"1\" />",
             "    <Label text=\"0, 2\" row=\"0\" col=\"2\" />",
@@ -120,7 +120,7 @@
     "{NS} Grid Layout 3x3 Automatic Width/Height": {
         "prefix": "NSgrid_3x3_auto",
         "body": [
-            "<GridLayout rows=\"auto, auto, auto\" colums=\"auto, auto, auto\">",
+            "<GridLayout rows=\"auto, auto, auto\" columns=\"auto, auto, auto\">",
             "    <Label text=\"0, 0\" row=\"0\" col=\"0\" />",
             "    <Label text=\"0, 1\" row=\"0\" col=\"1\" />",
             "    <Label text=\"0, 2\" row=\"0\" col=\"2\" />",
@@ -136,7 +136,7 @@
     "{NS} Grid Layout 4x3 ": {
         "prefix": "NSgrid_4x3",
         "body": [
-            "<GridLayout rows=\"*, *, *, *\" colums=\"*, *, *\">",
+            "<GridLayout rows=\"*, *, *, *\" columns=\"*, *, *\">",
             "    <Label text=\"0, 0\" row=\"0\" col=\"0\" />",
             "    <Label text=\"0, 1\" row=\"0\" col=\"1\" />",
             "    <Label text=\"0, 2\" row=\"0\" col=\"2\" />",
@@ -155,7 +155,7 @@
     "{NS} Grid Layout 4x3 Automatic Width/Height": {
         "prefix": "NSgrid_4x3_auto",
         "body": [
-            "<GridLayout rows=\"auto, auto, auto, auto\" colums=\"auto, auto, auto\">",
+            "<GridLayout rows=\"auto, auto, auto, auto\" columns=\"auto, auto, auto\">",
             "    <Label text=\"0, 0\" row=\"0\" col=\"0\" />",
             "    <Label text=\"0, 1\" row=\"0\" col=\"1\" />",
             "    <Label text=\"0, 2\" row=\"0\" col=\"2\" />",
@@ -174,7 +174,7 @@
     "{NS} Grid Layout 4x4": {
         "prefix": "NSgrid_4x4",
         "body": [
-            "<GridLayout rows=\"*, *, *, *\" colums=\"*, *, *, *\">",
+            "<GridLayout rows=\"*, *, *, *\" columns=\"*, *, *, *\">",
             "    <Label text=\"0, 0\" row=\"0\" col=\"0\" />",
             "    <Label text=\"0, 1\" row=\"0\" col=\"1\" />",
             "    <Label text=\"0, 2\" row=\"0\" col=\"2\" />",
@@ -197,7 +197,7 @@
     "{NS} Grid Layout 4x4 Automatic Width/Height": {
         "prefix": "NSgrid_4x4_auto",
         "body": [
-            "<GridLayout rows=\"auto, auto, auto, auto\" colums=\"auto, auto, auto, auto\">",
+            "<GridLayout rows=\"auto, auto, auto, auto\" columns=\"auto, auto, auto, auto\">",
             "    <Label text=\"0, 0\" row=\"0\" col=\"0\" />",
             "    <Label text=\"0, 1\" row=\"0\" col=\"1\" />",
             "    <Label text=\"0, 2\" row=\"0\" col=\"2\" />",
@@ -652,15 +652,15 @@
         "body": "rows=\"\"",
         "description": "A string value representing row heights delimited with commas. Row heights can be either an absolute number, auto or *. A number indicates an absolute row height, auto makes the row as high as its highest child, and * makes the row occupy all available vertical space."
     },
-    "{NS} Colums Attribute": {
-        "prefix": "colums",
-        "body": "colums=\"\"",
+    "{NS} columns Attribute": {
+        "prefix": "columns",
+        "body": "columns=\"\"",
         "description": "A string value representing column widths delimited with commas. Column widths can be either an absolute number, auto or *. A number indicates an absolute column width, auto makes the column as wide as its widest child, and * makes the column occupy all available horizontal space."
     },
     "{NS} Colspan Attribute": {
         "prefix": "colspan",
         "body": "colSpan=\"\"",
-        "description": "Gets or sets a value that indicates the total number of colums that child content spaNS within a GridLayout."
+        "description": "Gets or sets a value that indicates the total number of columns that child content spaNS within a GridLayout."
     },
     "{NS} Rowspan Attribute": {
         "prefix": "rowspan",
