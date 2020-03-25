@@ -16,7 +16,7 @@
         ]
     },
     /* #endregion */
-    // Layouts
+    // Layouts 
     "{NS} Stack Layout": {
         "prefix": "NSstack",
         "body": [
