@@ -2,7 +2,7 @@
 
 <!-- ## [Unreleased]
 - Initial release -->
-## [2.11.9] - 2020-3-25
+## [2.11.9] - 2020-3-25 6,311
 - Minor fix
 - Snippet columns corrections
 
