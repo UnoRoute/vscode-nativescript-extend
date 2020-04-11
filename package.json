@@ -308,9 +308,13 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
+    "preinstall": "npx npm-force-resolutions",
     "compile": "tsc -p ./",
     "watch": "tsc -w -p ./",
     "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "resolutions": {
+    "minimist": "^1.2.5"
   },
   "dependencies": {
     "expand-home-dir": "^0.0.3",
