@@ -1,8 +1,8 @@
 <div align="center">
-<image src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/icon.png" />
+<image src="https://github.com/bracketcore/vscode-nativescript-extend/raw/master/image/icon.png" />
 <h1>NativeScript Extend for Visual Studio Code</h1>
 
-[![vscode](https://img.shields.io/badge/vscode-v1.28+-373277.svg?style=for-the-badge)](https://code.visualstudio.com/updates/v1_28)[![made in nigeria](https://img.shields.io/badge/made%20in-nigeria-008751.svg?style=for-the-badge)](https://github.com/ehigiepaul/vscode-nativescript-extend)[![Marketplace Version](https://vsmarketplacebadge.apphb.com/version/paul-ehigie-paul.nativescript-extend.svg?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=paul-ehigie-paul.nativescript-extend)
+[![vscode](https://img.shields.io/badge/vscode-v1.28+-373277.svg?style=for-the-badge)](https://code.visualstudio.com/updates/v1_28)[![made in nigeria](https://img.shields.io/badge/made%20in-nigeria-008751.svg?style=for-the-badge)](https://github.com/bracketcore/vscode-nativescript-extend)[![Marketplace Version](https://vsmarketplacebadge.apphb.com/version/paul-ehigie-paul.nativescript-extend.svg?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=paul-ehigie-paul.nativescript-extend)
 
 </div>
 Nativescript Extend packs all your needs in make your Nativescript projects fast and easy. 
@@ -16,33 +16,35 @@ This extension comes with snippets, emulator executor, context menu for Nativesc
 
 > _Please note: To get the best out of this extension you wil have to disable or uninstall any nativescript snippets extension._
 
-> Please if anyone has any feature or fix on this extension, please kindly make a request on our [Github](https://github.com/ehigiepaul/vscode-nativescript-extend/issues) repository.
+> Please if anyone has any feature or fix on this extension, please kindly make a request on our [Github](https://github.com/bracketcore/vscode-nativescript-extend/issues) repository.
 
 # Changes
-## [2.11.9] - 2020-3-25
+## [2.11.11] - 2020-9-5 7,748
 - Minor fix
-- Snippet columns corrections
+- Context Menu fix
+- Command palette commands fix
+- Package/extension has changed ownership to Bracketcore
 
 
 # Features
 
 ## Nativescript intellisense and XML validation.
- <img height="500" width="auto" src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/intellisense.gif"/>
+ <img height="500" width="auto" src="https://github.com/bracketcore/vscode-nativescript-extend/raw/master/image/intellisense.gif"/>
 
 ## Emulator
-  <img height="500" width="auto" src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/emulator.gif"/>
+  <img height="500" width="auto" src="https://github.com/bracketcore/vscode-nativescript-extend/raw/master/image/emulator.gif"/>
 
 ## Emulator auto setup
-  <img height="500" width="auto" src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/auto%20setup.gif"/>
+  <img height="500" width="auto" src="https://github.com/bracketcore/vscode-nativescript-extend/raw/master/image/auto%20setup.gif"/>
 
 ## Snippets
-  <img height="500" width="auto" src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/snippets.gif"/>
+  <img height="500" width="auto" src="https://github.com/bracketcore/vscode-nativescript-extend/raw/master/image/snippets.gif"/>
 
 ## Snippets toggler
-  <img  width="700px" src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/toggle%20snippets.gif"/>
+  <img  width="700px" src="https://github.com/bracketcore/vscode-nativescript-extend/raw/master/image/toggle%20snippets.gif"/>
 
 ## Explorer Context Menu Page Creation,
- <img height="500" width="auto" src="https://github.com/ehigiepaul/vscode-nativescript-extend/raw/master/image/cm.gif"/>
+ <img height="500" width="auto" src="https://github.com/bracketcore/vscode-nativescript-extend/raw/master/image/cm.gif"/>
 
 # Snippets Components keys
 
