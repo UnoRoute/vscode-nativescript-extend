@@ -63,7 +63,7 @@ export class Emulator extends platformRun {
       vscode.window.showInformationMessage('We are setting up android emulator path for vscode');
       setTimeout(() => {
         if (!androidPath) {
-          vscode.window.showInformationMessage('It seems you dont have android sdk setup/installed on this system \n Please kindly it up for Nativescript Extend to work');
+          vscode.window.showInformationMessage('It seems you dont have android SDK setup/installed on this system \n Please kindly set it up for Nativescript Extend to work,');
           // console.log("not avaliable");
         } else {
           vscode.workspace.getConfiguration('NativescriptExtend').update('emulatorPath', join(androidPath, 'emulator', emuPlatformExec), true)
