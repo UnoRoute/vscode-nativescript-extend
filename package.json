@@ -6,7 +6,7 @@
   "icon": "image/icon.png",
   "publisher": "Paul-Ehigie-Paul",
   "repository": {
-    "url": "https://github.com/ehigiepaul/vscode-nativescript-extend.git"
+    "url": "https://github.com/bracketcore/vscode-nativescript-extend.git"
   },
   "engines": {
     "vscode": "^1.30.0"
@@ -30,9 +30,7 @@
   "activationEvents": [
     "*"
   ],
-  "extensionDependencies": [
-    "octref.vetur"
-  ],
+
   "main": "./out/extension",
   "contributes": {
     "commands": [
@@ -313,23 +311,17 @@
     "watch": "tsc -w -p ./",
     "postinstall": "node ./node_modules/vscode/bin/install"
   },
-  "resolutions": {
-    "minimist": "^1.2.5"
-  },
+  "resolutions": {},
   "dependencies": {
-    "expand-home-dir": "^0.0.3",
-    "find-java-home": "^0.2.0",
-    "glob": "^7.1.4",
+    "expand-home-dir": "0.0.3",
+    "find-java-home": "^1.1.0",
     "path-exists": "^4.0.0",
-    "tar": "^4.4.13",
     "tslib": "^1.13.0",
     "universal-analytics": "^0.4.23"
   },
   "devDependencies": {
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.12.55",
-    "gulp": "^4.0.2",
-    "gulp-tslint": "^8.1.4",
     "mocha": "^6.2.1",
     "tslint": "^5.20.0",
     "typescript": "^3.9.7",

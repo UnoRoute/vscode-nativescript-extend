@@ -2,6 +2,11 @@
 
 <!-- ## [Unreleased]
 - Initial release -->
+## [2.11.11] - 2020-9-5 7,748
+- Minor fix
+- Context Menu fix
+- Command palette commands fix
+
 ## [2.11.9] - 2020-3-25 6,311
 - Minor fix
 - Snippet columns corrections

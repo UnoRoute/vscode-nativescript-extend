@@ -38,6 +38,7 @@ export class contextMenu extends createPage implements IContext {
       })
     );
   }
+
   addTsPage(): void {
     this.ctx.subscriptions.push(
       vscode.commands.registerCommand("NativescriptExtend.addTsPage", arg => {
@@ -51,6 +52,7 @@ export class contextMenu extends createPage implements IContext {
       })
     );
   }
+
   addVuePage(): void {
     this.ctx.subscriptions.push(
       vscode.commands.registerCommand("NativescriptExtend.addVuePage", arg => {
@@ -64,6 +66,7 @@ export class contextMenu extends createPage implements IContext {
       })
     );
   }
+
   addNgPage(): void {
     this.ctx.subscriptions.push(
       vscode.commands.registerCommand("NativescriptExtend.addNGPage", arg => {
@@ -77,4 +80,5 @@ export class contextMenu extends createPage implements IContext {
       })
     );
   }
+  
 }

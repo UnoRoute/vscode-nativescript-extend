@@ -3,13 +3,13 @@
  */
 export class contents
   implements
-    ITypescriptContent,
-    IVueContents,
-    IAngularContents,
-    IJavascriptContent {
+  ITypescriptContent,
+  IVueContents,
+  IAngularContents,
+  IJavascriptContent {
+
   viewModelTs(name: string): string {
     return `import { Observable } from 'tns-core-modules/data/observable';
-
 export class ${inputToUpperCase(name)}ViewModel extends Observable {
     constructor() {
         super();
@@ -27,7 +27,6 @@ export function pageLoaded(args: EventData) {
      let page = <StackLayout>args.object;
     page.bindingContext = new ${inputToUpperCase(name)}ViewModel();
 }
-
 `;
   }
 
@@ -243,16 +242,16 @@ module.exports = ${inputToUpperCase(name)}ViewModel;
   /**
    *
    */
-  public constructor() {}
+  public constructor() { }
 }
 
-function inputToUpperCase(inputName:string) {
+function inputToUpperCase(inputName: string) {
   var inputUpperCase;
   inputUpperCase = inputName.charAt(0).toUpperCase() + inputName.slice(1);
   return camelCase(inputUpperCase);
 }
-function camelCase(input:string) {
-  return input.replace(/-([a-z])/gi, function(all, letter) {
+function camelCase(input: string) {
+  return input.replace(/-([a-z])/gi, function (all, letter) {
     return letter.toUpperCase();
   });
 }

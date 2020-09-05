@@ -1,4 +1,4 @@
-import ua from 'universal-analytics'
+import ua from "universal-analytics";
 import * as vscode from "vscode";
 
 
