@@ -2,7 +2,7 @@
   "name": "nativescript-extend",
   "displayName": "Nativescript Extend",
   "description": "Nativescript extend tool pack, helps Nativescript developers create cross-platform mobile apps easliy with the support of snippets, a xml validator and a run emulator from VSCode",
-  "version": "2.11.12",
+  "version": "2.11.13",
   "icon": "image/icon.png",
   "publisher": "Paul-Ehigie-Paul",
   "repository": {
@@ -29,6 +29,9 @@
   ],
   "activationEvents": [
     "*"
+  ],
+  "extensionDependencies": [
+    "octref.vetur"
   ],
   "main": "./out/extension",
   "contributes": {
@@ -327,7 +330,6 @@
     "gulp-tslint": "^8.1.4",
     "mocha": "^6.2.1",
     "tslint": "^5.20.0",
-    "typescript": "^3.6.3",
     "vscode": "^1.1.36",
     "vscode-languageclient": "^5.2.1"
   }

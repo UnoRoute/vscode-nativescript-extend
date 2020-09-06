@@ -53,8 +53,8 @@ export function lsp(context: ExtensionContext) {
       documentSelector: [
         { scheme: 'file', language: 'xml' },
         { scheme: 'file', language: 'xsl' },
-        { scheme: 'file', language: 'vue' },
-        { scheme: 'file', language: 'html' }
+        // { scheme: 'file', language: 'vue' },
+        // { scheme: 'file', language: 'html' }
       ],
       revealOutputChannelOn: RevealOutputChannelOn.Never,
       //wrap with key 'settings' so it can be handled same a DidChangeConfiguration
