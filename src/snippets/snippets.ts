@@ -29,7 +29,7 @@ export class snippet {
     if (val) {
       vscode.workspace
         .getConfiguration("editor")
-        .update("snippetSuggestions", "top", false);
+        .update("snippetSuggestions", "Bottom", false);
     } else {
       vscode.workspace
         .getConfiguration("editor")

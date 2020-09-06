@@ -17,13 +17,13 @@ export function activate(context: vscode.ExtensionContext) {
     "package.json"
   );
 
-  readFile(file, (err, data) => {
+  readFile(file, async (err, data) => {
     if (err) console.log("This is not a nativescript project");
     
     if (data.toString().search("nativescript") > 0) {
       console.log('Congratulations, "Nativescript-Extend" is now active!');
       //  enable extension if nativescript is found in the package.json
-      lsp(context);
+     await lsp(context);
       new contextMenu(context);
       new Emulator(context);
       new snippet(context);

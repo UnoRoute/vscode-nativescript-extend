@@ -11,7 +11,7 @@
  */
 
 import { prepareExecutable } from './javaServerStarter';
-import { LanguageClientOptions, RevealOutputChannelOn, LanguageClient, DidChangeConfigurationNotification, RequestType, TextDocumentPositionParams, RequestType0 } from 'vscode-languageclient';
+import { LanguageClientOptions, RevealOutputChannelOn, LanguageClient, DidChangeConfigurationNotification, RequestType, TextDocumentPositionParams, RequestType0 } from "vscode-languageclient";
 import * as requirements from './requirements';
 import { languages, IndentAction, workspace, window, commands, ExtensionContext, TextDocument, Position, LanguageConfiguration } from "vscode";
 import * as path from 'path';
@@ -61,7 +61,7 @@ export function lsp(context: ExtensionContext) {
       initializationOptions: {"settings": getXMLSettings()}, 
       synchronize: {
         //preferences starting with these will trigger didChangeConfiguration
-        configurationSection: ['xml', '[xml]']
+        configurationSection: ['xml', '[xml]', "vue",'[vue]', 'html','[html]']
       },
       middleware: {
         workspace: {
@@ -78,7 +78,7 @@ export function lsp(context: ExtensionContext) {
     }
 
     let serverOptions = prepareExecutable(requirements);
-    let languageClient = new LanguageClient('xml', 'NativescriptExtend XML Support', serverOptions, clientOptions);
+    let languageClient = new LanguageClient('xml', 'Nativescript Extend XML Support', serverOptions, clientOptions);
     let toDispose = context.subscriptions;
     let disposable = languageClient.start();
     toDispose.push(disposable);
@@ -90,13 +90,13 @@ export function lsp(context: ExtensionContext) {
         return text;
       };
 
-      disposable = activateTagClosing(tagProvider, { xml: true, xsl: true }, 'xml.completion.autoCloseTags');
+      disposable = activateTagClosing(tagProvider, { xml: true, xsl: true, vue: true, html: true }, 'xml.completion.autoCloseTags');
       toDispose.push(disposable);
     });
     languages.setLanguageConfiguration('xml', getIndentationRules());
     languages.setLanguageConfiguration('xsl', getIndentationRules());
-    // languages.setLanguageConfiguration('vue', getIndentationRules());
-    // languages.setLanguageConfiguration('html', getIndentationRules());
+    languages.setLanguageConfiguration('vue', getIndentationRules());
+    languages.setLanguageConfiguration('html', getIndentationRules());
   });
 
   /**
