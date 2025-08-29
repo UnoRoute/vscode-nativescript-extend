@@ -320,7 +320,7 @@
     "path-exists": "^4.0.0",
     "tar": "^4.4.18",
     "tslib": "^1.10.0",
-    "universal-analytics": "^0.4.20",
+    "universal-analytics": "^0.5.3",
     "vscode-languageclient": "^5.2.1"
   },
   "devDependencies": {
